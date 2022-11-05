@@ -11,6 +11,7 @@ import Navbart from "../Shared/Navbart";
 
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import Sidemenu from "../Shared/Sidemenu/Sidebar";
 
 // bars
 
@@ -45,13 +46,19 @@ export default function Calender() {
 
   return (
     <>
-      <Navbart />
+     
       <div className="container">
         <div className="row">
-          <div className="col-md-2">
-            <Button variant="primary" onClick={handleShow}>
+           
+          
+          
+          <div className="col-md-12">
+
+          <Button variant="primary" onClick={handleShow}>
               Launch static backdrop modal
             </Button>
+
+          
 
             <Modal
               show={show}
@@ -108,9 +115,7 @@ export default function Calender() {
             </Modal>
 
             
-          
-          </div>
-          <div className="col-md-9">
+
             <h1 className="text-center m-0">Calendar</h1>
             <h2 className="text-center">Add New Event</h2>
             <div></div>
