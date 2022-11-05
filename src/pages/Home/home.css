@@ -1,0 +1,100 @@
+
+.container1 {
+  margin-left:150px;
+  box-sizing: border-box;
+}
+.total{
+    width:200px;
+    height: 100px;
+    background-color: var(--beige);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    font-size: 20px;
+    border-radius: 20px;
+    text-align: center;
+ margin-top:150px ;
+}
+.value {
+    color: var(--red);
+    font-weight: 800;
+    
+}
+ .addclass{
+     margin-top: 150px;
+    margin-right: 124px;
+    width:300px;
+    background-color: var(--blue);
+    height: 70px;
+    border:none;
+    border-radius: 50px;
+    color: var(--white);
+    font-size: 30px; 
+ }
+
+
+/* CSS */
+.button-56 {
+    width:300px;
+    margin-top: 150px;
+    margin-right: 124px;
+  align-items: center;
+  background-color:var(--beige);
+  border: 2px solid var(--white);
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 25px;
+  height: 80px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-56:after {
+  background-color: var(--pink);
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 80px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
+ 
+
+.addclass:hover{
+  box-shadow: inset;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
