@@ -1,10 +1,12 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
-  return <div className="App">
+// import Sidemenu from "./components/Sidemenu";
+import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-  </div>;
+function App() {
+  return <div className="App"></div>;
 }
 
 export default App;
