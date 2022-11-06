@@ -1,0 +1,19 @@
+/* :root {
+  --blue: #5a7cbf;
+  --beige: #d9d0a7;
+  --white: #f2e6df;
+  --red: #a63c24;
+  --pink: #f28e85;
+} */
+.student {
+  background-color: rgba(242, 230, 223, 0.6);
+  border-radius: 0 0 10px 10px;
+  box-shadow: 6px 2px 8px var(--beige) inset, -6px 0px 8px var(--beige) inset;
+}
+.student__photo {
+  width: 120px;
+  height: 120px;
+}
+.student__title {
+  color: var(--blue);
+}

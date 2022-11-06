@@ -11,6 +11,7 @@ import Navbart from "../Shared/Navbart";
 
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import Sidemenu from "../Shared/Sidemenu/Sidebar";
 
 // bars
 
@@ -45,13 +46,30 @@ export default function Calender() {
 
   return (
     <>
-      <Navbart />
-      <div className="container">
-        <div className="row">
-          <div className="col-md-2">
-            <Button variant="primary" onClick={handleShow}>
-              Launch static backdrop modal
-            </Button>
+      <div className="container-fluid">
+       
+         
+
+            <div className="row">
+              <div className="col-md-5 m-auto">
+            <h1 className="text-center mt-4">Calendar</h1>
+  
+<Button variant="primary" className="w-100 mb-3" onClick={handleShow}>
+                Add New Event
+              </Button>
+              </div>
+
+              <div className="col-md-11 m-auto">
+                <Calendar
+                  localizer={localizer}
+                  events={allEvents}
+                  startAccessor="start"
+                  endAccessor="end"
+                  className="w-100"
+                  style={{ height: 450 }}
+                />
+              </div>
+            </div>
 
             <Modal
               show={show}
@@ -63,39 +81,39 @@ export default function Calender() {
                 <Modal.Title>Modal title</Modal.Title>
               </Modal.Header>
               <Modal.Body>
-              <label htmlFor="title">Your Task Title</label>
-            <input
-              type="text"
-              id="title"
-              placeholder="Add Title"
-              className="form-control"
-              value={newEvent.title}
-              onChange={(e) =>
-                setNewEvent({ ...newEvent, title: e.target.value })
-              }
-            />
+                <label htmlFor="title">Your Task Title</label>
+                <input
+                  type="text"
+                  id="title"
+                  placeholder="Add Title"
+                  className="form-control"
+                  value={newEvent.title}
+                  onChange={(e) =>
+                    setNewEvent({ ...newEvent, title: e.target.value })
+                  }
+                />
 
-            <label htmlFor="start">Your Start Date</label>
-            <DatePicker
-              placeholderText="Start Date"
-              id="start"
-              className="form-control"
-              style={{ marginRight: "10px" }}
-              selected={newEvent.start}
-              onChange={(start) => setNewEvent({ ...newEvent, start })}
-            />
+                <label htmlFor="start">Your Start Date</label>
+                <DatePicker
+                  placeholderText="Start Date"
+                  id="start"
+                  className="form-control"
+                  style={{ marginRight: "10px" }}
+                  selected={newEvent.start}
+                  onChange={(start) => setNewEvent({ ...newEvent, start })}
+                />
 
-            <label htmlFor="end">Your End Date</label>
-            <DatePicker
-              placeholderText="End Date"
-              id="end"
-              className="form-control"
-              selected={newEvent.end}
-              onChange={(end) => setNewEvent({ ...newEvent, end })}
-            />
-              <button className="btn btn-primary" onClick={handelAddEvents}>
-              Submit
-            </button>
+                <label htmlFor="end">Your End Date</label>
+                <DatePicker
+                  placeholderText="End Date"
+                  id="end"
+                  className="form-control"
+                  selected={newEvent.end}
+                  onChange={(end) => setNewEvent({ ...newEvent, end })}
+                />
+                <button className="btn btn-primary" onClick={handelAddEvents}>
+                  Submit
+                </button>
               </Modal.Body>
               <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>
@@ -106,24 +124,8 @@ export default function Calender() {
                 </Button>
               </Modal.Footer>
             </Modal>
-
-            
-          
-          </div>
-          <div className="col-md-9">
-            <h1 className="text-center m-0">Calendar</h1>
-            <h2 className="text-center">Add New Event</h2>
-            <div></div>
-            <Calendar
-              localizer={localizer}
-              events={allEvents}
-              startAccessor="start"
-              endAccessor="end"
-              className="w-100"
-              style={{ height: 450 }}
-            />
-          </div>
-        </div>
+         
+       
       </div>
     </>
   );
