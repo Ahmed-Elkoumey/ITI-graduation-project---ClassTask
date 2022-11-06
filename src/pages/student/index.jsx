@@ -6,8 +6,8 @@ const Student = () => {
   return (
     <main>
       <StudentNav />
-      <section className="p-5 container student">
-        <div className="d-flex justify-content-around">
+      <section className="p-5 container-fluid student">
+        <div className="d-flex justify-content-around w-100 mb-2">
           <img
             src={UserAvatar}
             alt="user-avatar"
@@ -17,6 +17,7 @@ const Student = () => {
             Name: <h2 className="student__title ms-2 fw-bold">User Name</h2>
           </p>
         </div>
+        {/* <div className="container w-100"> */}
         <div className="row">
           <div className="col-md-6 col-sm-12">
             <h2>Student Details</h2>
@@ -33,6 +34,7 @@ const Student = () => {
             <p>Parent Number:</p>
           </div>
         </div>
+        {/* </div> */}
       </section>
     </main>
   );
