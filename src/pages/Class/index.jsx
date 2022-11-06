@@ -61,8 +61,8 @@ function AllClasses() {
             <td className=" d-flex justify-content-between">
               <div><a>https://drive.google.com/drive/my-drive</a></div>
               <div class="checkbox-wrapper-26">
-                <input type="checkbox" id="_checkbox-26" />
-                <label for="_checkbox-26">
+                <input type="checkbox" id="_checkbox-25" />
+                <label for="_checkbox-25">
                   <div class="tick_mark"></div>
                 </label>
               </div>
@@ -83,8 +83,8 @@ function AllClasses() {
             <td className=" d-flex justify-content-between">
               <div><a>https://drive.google.com/drive/my-drive</a></div>
               <div class="checkbox-wrapper-26">
-                <input type="checkbox" id="_checkbox-26" />
-                <label for="_checkbox-26">
+                <input type="checkbox" id="_checkbox-23" />
+                <label for="_checkbox-23">
                   <div class="tick_mark"></div>
                 </label>
               </div>
@@ -105,8 +105,8 @@ function AllClasses() {
             <td className=" d-flex justify-content-between">
               <div><a>https://drive.google.com/drive/my-drive</a></div>
               <div class="checkbox-wrapper-26">
-                <input type="checkbox" id="_checkbox-26" />
-                <label for="_checkbox-26">
+                <input type="checkbox" id="_checkbox-20" />
+                <label for="_checkbox-20">
                   <div class="tick_mark"></div>
                 </label>
               </div>

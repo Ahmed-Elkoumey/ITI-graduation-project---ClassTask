@@ -17,7 +17,7 @@ const Sidemenu = ({children}) => {
     const menuItem=[
         {
             path:"/",
-            name:"All students",
+            name:"Dashboard",
             icon:<FaTh/>
         },
         {
@@ -31,13 +31,13 @@ const Sidemenu = ({children}) => {
             icon:<FaRegChartBar/>
         },
    
-        {
-            path:"/Allclasses",
-            name:"AllClasses",
-            icon:<FaChalkboardTeacher/>,
+        // {
+        //     path:"/Allclasses",
+        //     name:"AllClasses",
+        //     icon:<FaChalkboardTeacher/>,
          
            
-        }
+        // }
     ]
     return (
         <div className="container">
@@ -65,24 +65,7 @@ const Sidemenu = ({children}) => {
            
            </main>
     
-           {/* homepage */}
-          
-        {/* <div className=' d-flex align-baseline  '>
-       <div>
-        {/* <button className='mb-4    addclass'>Add new Class + </button> */}
-       {/* <button class="button-56" role="button">Add new Class +</button>
-       </div>
-     
-        <div className="mb-2 d-flex   home">
-        <div className='total me-5'>
-         <p> Total students are<br/><p className='value'>50 Students</p></p>
-
-        </div>
-        <div className='total '>
-            <p> Total classes are<br/> <p className='value'>5 classes</p></p>
-            </div>
-        </div>
-        </div> */}
+           
         </div> 
     );
 };
