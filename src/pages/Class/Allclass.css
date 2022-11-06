@@ -6,9 +6,16 @@
     color:var(--blue)
 }
 .table{
-    background-color: var(--blue) ;
+    background-color: var(--beige) ;
+    opacity: 1;
+     border: var(--white); 
+    border-radius: 20px;
 
 }
+thead{
+  color: var(--blue);
+}
+
 .table.tbody.tr:hover{
 opacity: 5;
 }
