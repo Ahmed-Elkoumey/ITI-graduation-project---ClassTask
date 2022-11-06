@@ -8,6 +8,7 @@
 .student {
   background-color: rgba(242, 230, 223, 0.6);
   border-radius: 0 0 10px 10px;
+  box-shadow: 6px 2px 8px var(--beige) inset, -6px 0px 8px var(--beige) inset;
 }
 .student__photo {
   width: 120px;

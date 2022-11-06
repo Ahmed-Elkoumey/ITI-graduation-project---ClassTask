@@ -1,6 +1,6 @@
 import { BsSearch } from "react-icons/bs";
 import { IoNotificationsOutline } from "react-icons/io5";
-import UserAvatar from "../../assets/user-avatar.jpg";
+import UserAvatar from "../../../assets/user-avatar.jpg";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";

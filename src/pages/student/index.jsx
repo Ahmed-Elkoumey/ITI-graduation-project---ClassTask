@@ -1,5 +1,6 @@
-import StudentNav from "../../components/student-nav";
+import StudentNav from "../../components/student/student-nav";
 import UserAvatar from "../../assets/user-avatar.jpg";
+import StudentTasks from "../../components/student/student-tasks";
 import "./style.css";
 
 const Student = () => {
@@ -17,25 +18,26 @@ const Student = () => {
             Name: <h2 className="student__title ms-2 fw-bold">User Name</h2>
           </p>
         </div>
-        {/* <div className="container w-100"> */}
-        <div className="row">
-          <div className="col-md-6 col-sm-12">
-            <h2>Student Details</h2>
-            <p>Student Name:</p>
-            <p>Student ID:</p>
-            <p>Date Of Birth:</p>
-            <p>Graduation Year:</p>
-            <p>Enrolled class:</p>
-          </div>
-          <div className="col-md-6 col-sm-12">
-            <h2>Parent Details</h2>
-            <p>Parent Name:</p>
-            <p>Parent Email:</p>
-            <p>Parent Number:</p>
+        <div className="p-5">
+          <div className="row">
+            <div className="col-md-6 col-sm-12">
+              <h2>Student Details</h2>
+              <p>Student Name:</p>
+              <p>Student ID:</p>
+              <p>Date Of Birth:</p>
+              <p>Graduation Year:</p>
+              <p>Enrolled class:</p>
+            </div>
+            <div className="col-md-6 col-sm-12">
+              <h2>Parent Details</h2>
+              <p>Parent Name:</p>
+              <p>Parent Email:</p>
+              <p>Parent Number:</p>
+            </div>
           </div>
         </div>
-        {/* </div> */}
       </section>
+      <StudentTasks />
     </main>
   );
 };
