@@ -22,7 +22,7 @@ const StudentNav = () => {
     </div>
   );
   return (
-    <Navbar collapseOnSelect expand="lg" className="student-nav mh-100">
+    <Navbar collapseOnSelect expand="lg" className="student-nav">
       <Navbar.Brand href="#home" className="student__logo">
         ClassTask
       </Navbar.Brand>
