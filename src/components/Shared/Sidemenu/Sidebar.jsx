@@ -16,13 +16,13 @@ const Sidemenu = ({children}) => {
     const toggle = () => setIsOpen (!isOpen);
     const menuItem=[
         {
-            path:"/",
+            path:"/dashboard",
             name:"Dashboard",
             icon:<FaTh/>
         },
         {
-            path:"/calendar",
-            name:"Calendar",
+            path:"/calender",
+            name:"Calender",
             icon:<FaRegCalendarAlt/>
         },
         {
@@ -31,13 +31,13 @@ const Sidemenu = ({children}) => {
             icon:<FaRegChartBar/>
         },
    
-        // {
-        //     path:"/Allclasses",
-        //     name:"AllClasses",
-        //     icon:<FaChalkboardTeacher/>,
+        {
+            path:"/Allclasses",
+            name:"AllClasses",
+            icon:<FaChalkboardTeacher/>,
          
            
-        // }
+        }
     ]
     return (
         <div className="container">

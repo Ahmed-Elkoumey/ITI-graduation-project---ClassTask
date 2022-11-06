@@ -2,8 +2,15 @@ import "./Allclass.css";
 
 import Table from "react-bootstrap/Table";
 import std1 from "./avatar-ebd2b8ace0fe7e957f6d19ae33582675.jpg";
+import Navbart from "../../components/Shared/Navbart";
+import Sidemenu from "../../components/Shared/Sidemenu/Sidebar";
 function AllClasses() {
   return (
+    <>
+    
+    <Navbart />
+    <Sidemenu>
+      
     <div className=" mt-3 ms-3 ">
         <div className=" d-flex align-baseline">
       <h4 className="headinf ">Class </h4>
@@ -117,6 +124,9 @@ function AllClasses() {
         </tbody>
       </Table>
     </div>
+    
+    </Sidemenu>
+    </>
   );
 }
 export default AllClasses;

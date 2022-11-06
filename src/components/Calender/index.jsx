@@ -47,7 +47,8 @@ export default function Calender() {
   return (
     <>
       <div className="container-fluid">
-       
+        <Navbart/>
+      <Sidemenu>
          
 
             <div className="row">
@@ -125,7 +126,7 @@ export default function Calender() {
               </Modal.Footer>
             </Modal>
          
-       
+            </Sidemenu>
       </div>
     </>
   );

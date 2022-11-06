@@ -7,6 +7,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { Form } from "react-bootstrap";
 
 import "./style.css";
+import { Link } from "react-router-dom";
 const StudentNav = () => {
   let userInfo = (
     <div className="d-flex rounded-pill user-info pe-2">
@@ -64,7 +65,7 @@ const StudentNav = () => {
             <NavDropdown.Item href="#">Profile</NavDropdown.Item>
             <NavDropdown.Item href="#">Classes</NavDropdown.Item>
             <NavDropdown.Item href="#">Tasks</NavDropdown.Item>
-            <NavDropdown.Item href="#">Calender</NavDropdown.Item>
+            <Link to="/calender">Calender</Link>
             <NavDropdown.Divider />
             <NavDropdown.Item href="#">Settings</NavDropdown.Item>
           </NavDropdown>

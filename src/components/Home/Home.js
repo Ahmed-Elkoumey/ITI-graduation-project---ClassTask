@@ -11,7 +11,7 @@ import Footer from "./Footer";
 const Home = () => {
     return (  
         <div className="home">
-            <Navigationbar/>
+             <Navigationbar />
             <Hero />
             <Services />
             <Vision/>
