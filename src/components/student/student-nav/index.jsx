@@ -23,7 +23,7 @@ const StudentNav = () => {
     </div>
   );
   return (
-    <Navbar collapseOnSelect expand="lg" className="student-nav">
+    <Navbar collapseOnSelect expand="lg" className="student-nav px-3 py-0">
       <Navbar.Brand href="#home" className="student__logo">
         ClassTask
       </Navbar.Brand>
@@ -62,12 +62,25 @@ const StudentNav = () => {
             id="collasible-nav-dropdown"
             className="mh-100"
           >
-            <NavDropdown.Item href="#">Profile</NavDropdown.Item>
-            <NavDropdown.Item href="#">Classes</NavDropdown.Item>
-            <NavDropdown.Item href="#">Tasks</NavDropdown.Item>
-            <Link to="/calender">Calender</Link>
+            <NavDropdown.Item>
+              <Link to="/student">Profile</Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <Link to="/student">Classes</Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <Link to="/student">Tasks</Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <Link to="/calender">Calender</Link>
+            </NavDropdown.Item>
             <NavDropdown.Divider />
-            <NavDropdown.Item href="#">Settings</NavDropdown.Item>
+            <NavDropdown.Item>
+              <Link to="/student">Settings</Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <Link to="/student">Log Out</Link>
+            </NavDropdown.Item>
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>

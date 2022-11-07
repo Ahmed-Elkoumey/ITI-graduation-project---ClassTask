@@ -14,9 +14,14 @@
   border-radius: 10px 10px 0 0;
   box-shadow: 6px 2px 8px var(--beige) inset, -6px -2px 8px var(--beige) inset;
 }
-.student-tasks__container {
+.student-tasks__part {
   background-color: rgba(242, 230, 223, 0.8);
   border-radius: 10px;
+  margin: 0 auto;
+}
+.student-tasks__info {
+  color: #333;
+  font-weight: bold;
 }
 .empty-poster {
   width: 20rem;
@@ -28,4 +33,15 @@
 }
 thead {
   font-weight: bold;
+}
+.student__name,
+.student__id,
+.student__date,
+.student__grad-year,
+.student__class,
+.student__parent-name,
+.student__parent-mail,
+.student__parent-number {
+  color: var(--blue);
+  font-size: 1.2rem;
 }
