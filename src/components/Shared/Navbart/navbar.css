@@ -1,18 +1,17 @@
-/* 
-:root {
-    --blue: #5A7CBF  ;
-   --beige : #D9D0A7 ;
-   --white:#F2E6DF ;
-   --red:#A63C24 ;
-   --pink : #F28E85 ;
-    
-  } */
-  .navbar{
+
+/* .logo1{
+   
+    display: block;
+    z-index: 100;
+    transition: all 250ms linear;
+
+} */
+  #navbart{
 background-color:var(--beige);
  color:var(--white);
 
 }
-.logo{
+.logo_AT{
     color:var(--blue);
     font-size: 50;
     font-weight: bolder;
@@ -20,7 +19,7 @@ background-color:var(--beige);
     
 }
 
-.acc{
+.acc_AT{
     background-color: var(--white);
     border-radius: 30px;
     height: 40px;
@@ -29,14 +28,14 @@ background-color:var(--beige);
     padding-bottom: 20 px;
 
 }
-.notification {
+.notification_AT {
     color:var(--blue);
     font-size: 30px;   
 }
-.search{
+.search_AT{
     margin-right: 300px;
 }
-.button{
+.button_AT{
     color: var(--white );
 }
 /* .accountbar{

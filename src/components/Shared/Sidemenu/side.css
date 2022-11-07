@@ -3,7 +3,7 @@
     padding:0; */
     text-decoration: none;
 }
-.container{
+.container-AT{
     display:flex;
     margin: -10px ;
     border-radius: 10px;
@@ -13,7 +13,7 @@ main{
     width: 100%; 
      padding:0 px;
 }
-.sidebar{
+.sidebar_AT{
     background: var(--beige) ;
     color: var(--blue);
     height: 100vh;
@@ -21,39 +21,39 @@ main{
     transition: all 0.5s;
     text-decoration: none;
 }
-.top_section{
+.top_section_AT{
     display: flex;
     align-items:center;
      padding:20px 15px; 
 }
-.logo{
+.logo_AT{
     font-size: 20px;
 }
-.bars{
+.bars_AT{
     display: flex;
     font-size: 25px;
     margin-left: 50px;
 }
-.bars:hover{
+.bars_AT:hover{
   cursor: pointer;
 }
-.link{
+.link1_AT{
     display: flex;
     color: var(--blue);
     padding: 10px 15px;
     gap: 15px;
     transition: all 0.5s;
 }
-.link:hover{
+.link1_AT:hover{
     background:var(--white);
     color: #000;
     transition: all 0.5s;
 }
-.active{
+.active_AT{
     background:var(--white);
     color: #000;
 }
-.icon, .link_text{
+.icon_AT, .link_text_AT{
     font-size: 20px;
   
 }
