@@ -5,13 +5,14 @@
 }
 .total{
     width:200px;
-    height: 100px;
+    height: 200px;
     background-color: var(--beige);
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     font-size: 20px;
     border-radius: 20px;
     text-align: center;
- margin-top:150px ;
+   padding-top: 50px;
+ margin-top:75px ;
 }
 .value {
     color: var(--red);
@@ -29,19 +30,35 @@
     color: var(--white);
     font-size: 30px; 
  }
+.header-popup,.footer-popup{
+  background-color: var(--beige);
 
+}
+.body-popup{
+  background-color: var(--white);
+
+}
+
+.id{
+  font-weight: 700;
+}
+.cell{
+  color:white ;
+  text-decoration: none;
+}
 
 /* CSS */
 .button-56 {
     width:300px;
-    margin-top: 150px;
+    color:var(--blue);
+    /* margin-top: 150px; */
     margin-right: 124px;
   align-items: center;
   background-color:var(--beige);
   border: 2px solid var(--white);
   border-radius: 8px;
   box-sizing: border-box;
-  color: #111;
+  /* color: #111; */
   cursor: pointer;
   display: flex;
   font-family: Inter,sans-serif;

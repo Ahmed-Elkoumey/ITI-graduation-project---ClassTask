@@ -3,11 +3,25 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import "./../login/login.scss";
 import InputGroup from "react-bootstrap/InputGroup";
+// Routing
+import { useNavigate } from 'react-router-dom';
+
+
+
 const SignUp = () => {
+
+  const goToLogin =useNavigate();
+
+
+  const handleClick = e => {
+    e.preventDefault();
+    goToLogin('/login');
+  }
+
   return (
     <div className="form-wrapper">
       <div className="container">
-        <Form className="form">
+        <Form className="form" onSubmit={e=>handleClick(e)}>
           <InputGroup className="mb-3">
             <InputGroup.Text>First and last name</InputGroup.Text>
             <Form.Control aria-label="First name" />
