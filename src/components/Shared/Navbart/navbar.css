@@ -1,0 +1,43 @@
+
+/* .logo1{
+   
+    display: block;
+    z-index: 100;
+    transition: all 250ms linear;
+
+} */
+  #navbart{
+background-color:var(--beige);
+ color:var(--white);
+
+}
+.logo_AT{
+    color:var(--blue);
+    font-size: 50;
+    font-weight: bolder;
+    margin-right: 350px;
+    
+}
+
+.acc_AT{
+    background-color: var(--white);
+    border-radius: 30px;
+    height: 40px;
+    display: flex;
+    justify-content: baseline;
+    padding-bottom: 20 px;
+
+}
+.notification_AT {
+    color:var(--blue);
+    font-size: 30px;   
+}
+.search_AT{
+    margin-right: 300px;
+}
+.button_AT{
+    color: var(--white );
+}
+/* .accountbar{
+    background-color: var(--beige);
+} */

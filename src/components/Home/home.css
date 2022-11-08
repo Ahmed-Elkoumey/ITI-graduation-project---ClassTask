@@ -1,0 +1,56 @@
+body{
+  overflow-x: hidden;
+}
+
+.navbar {
+background-color:#F2E6DF ;
+}
+
+.hero{
+    overflow-x: hidden;
+    background-color: #F28E85;
+}
+
+.hero p{
+    max-width: 300px;
+}
+
+.hero button{
+    background-color: #5A7CBF;
+}
+
+/* .services{
+    background-color: #D9D0A7;
+} */
+.our-vision{
+    background-color: #F2E6DF;
+    overflow-x: hidden;
+}
+
+
+.our-vision p{
+    max-width: 500px;
+}
+
+
+
+
+
+.member .pricing-button-ash{
+    background-color: #5A7CBF;
+    color: white;
+}
+
+.footer{
+    background-color: #F2E6DF;
+}
+
+
+.card-container-ash{
+  background-color: #F28E85;
+}
+
+.card-title-ash{
+  background-color: #5A7CBF;
+  color: white;
+}
