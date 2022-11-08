@@ -2,22 +2,20 @@ import "./login.scss";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
-
+import Navigationbar from "../Home/Navigationbar";
 const Login = () => {
+  const goToLogin = useNavigate();
 
-
-  const goToLogin =useNavigate();
-
-
-  const handleClick = e => {
+  const handleClick = (e) => {
     e.preventDefault();
-    goToLogin('/student');
-  }
+    goToLogin("/student");
+  };
 
   return (
     <div className="form-wrapper">
+      <Navigationbar />
       <div className="container">
-        <Form className="form" onSubmit={e=>handleClick(e)} >
+        <Form className="form" onSubmit={(e) => handleClick(e)}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control type="email" placeholder="Enter email" />
