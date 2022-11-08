@@ -1,4 +1,5 @@
 import "./Allclass.css";
+
 import DatePicker from "react-datepicker";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
@@ -33,6 +34,10 @@ function AllClasses() {
       <h4 className="headinf ">Class </h4>
       <h4 className="info">(Math J4)</h4>
       </div>
+      <div>
+        
+      </div>
+  
       <Button
               variant="primary"
               onClick={handleShow2}
