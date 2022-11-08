@@ -11,22 +11,22 @@ import teacher from "./assests/teacher1.jpg";
 
 function Navbart() {
   return (
-    <Navbar className='navbar d-flex justify-content-between' expand="lg">
+    <Navbar id='navbart' className='navbart d-flex justify-content-between' expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#" className='logo' >ClassTask</Navbar.Brand>
+        <Navbar.Brand href="#" className=' logo_AT' >ClassTask</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
     
-          <Form className="d-flex search" >
+          <Form className="d-flex search_AT" >
             <Form.Control
               type="search"
               placeholder="Search here..."
               className="me-2"
               aria-label="Search"
             />
-            <Button className="button">Search </Button>
+            <Button className="button_AT">Search </Button>
           </Form>
-          <div><Navbar.Brand href="#" className='notification ' ><FaBell/></Navbar.Brand></div>
+          <div><Navbar.Brand href="#" className='notification_AT ' ><FaBell/></Navbar.Brand></div>
 {/* accounte */}
 
              <Nav
@@ -34,10 +34,10 @@ function Navbart() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-        <div className=' d-flex  acc' >
+        <div className=' d-flex  acc_AT' >
      
                   <img className=' rounded-circle img-fluid teacher' src={teacher} alt='user'/>
-            <NavDropdown  title="Ahmed Elzoghaby" id="navbarScrollingDropdown" className="accountbar">
+            <NavDropdown  title="Ahmed Elzoghaby" id="navbarScrollingDropdown" className="accountbar_AT">
               <NavDropdown.Item href="#action3" className='dropdown'>Settings</NavDropdown.Item>
               <NavDropdown.Item href="#action4" className='dropdown'>
                 Help

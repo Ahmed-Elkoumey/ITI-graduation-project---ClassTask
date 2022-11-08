@@ -1,6 +1,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+
 import AllClasses from "./pages/Class";
 import Navbart from "./components/Shared/Navbart";
 // import Sidemenu from "./components/Sidemenu";

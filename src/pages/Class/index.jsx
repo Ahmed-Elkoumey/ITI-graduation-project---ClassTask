@@ -1,11 +1,29 @@
 import "./Allclass.css";
 
+import DatePicker from "react-datepicker";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import Form from "react-bootstrap/Form";
+import React, { useState } from "react";
 import Table from "react-bootstrap/Table";
 import std1 from "./avatar-ebd2b8ace0fe7e957f6d19ae33582675.jpg";
 import Navbart from "../../components/Shared/Navbart";
 import Sidemenu from "../../components/Shared/Sidemenu/Sidebar";
+
 function AllClasses() {
+  const [startDate, setStartDate] = useState(new Date());
+  const [show1, setShow1] = useState(false);
+
+  const handleClose1 = () => setShow1(false);
+  const handleShow1 = () => setShow1(true);
+
+  const [show2, setShow2] = useState(false);
+
+  const handleClose2 = () => setShow2(false);
+  const handleShow2 = () => setShow2(true);
+
   return (
+   
     <>
     
     <Navbart />
@@ -16,8 +34,109 @@ function AllClasses() {
       <h4 className="headinf ">Class </h4>
       <h4 className="info">(Math J4)</h4>
       </div>
-     
-      <button className="addstd mb-2">Add student</button>
+      <div>
+        
+      </div>
+  
+      <Button
+              variant="primary"
+              onClick={handleShow2}
+              className="addstd mb-2"
+            >
+              Add New student
+            </Button>
+            <Modal show={show2} onHide={handleClose2}>
+              <Modal.Header closeButton className="header-popup">
+                <Modal.Title>Student Data </Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <Form>
+                  <Form.Group
+                    className="mb-3"
+                    controlId="exampleForm.ControlInput2"
+                  >
+                    <Form.Label>Student Id</Form.Label>
+                    <Form.Control placeholder=" ex:#123654" autoFocus />
+                  </Form.Group>
+                  <Form.Group
+                    className="mb-3"
+                    controlId="exampleForm.ControlTextInput3"
+                  >
+                    <Form.Label>first name</Form.Label>
+                    <Form.Control placeholder=" ex:Ali" autoFocus />
+                  </Form.Group>
+                  <Form.Group
+                    className="mb-3"
+                    controlId="exampleForm.ControlTextInput3"
+                  >
+                    <Form.Label>Last name</Form.Label>
+                    <Form.Control placeholder=" ex:Mohamed" autoFocus />
+                  </Form.Group>
+                  <Form.Group
+                    className="mb-3"
+                  >
+                  
+                 
+                  </Form.Group>
+                </Form>
+              </Modal.Body>
+              <Modal.Footer className="footer-popup">
+                <Button variant="secondary" onClick={handleClose2}>
+                  Close
+                </Button>
+                <Button variant="primary" onClick={handleClose2}>
+                  Add student
+                </Button>
+              </Modal.Footer>
+            </Modal>
+
+
+      <Button
+              variant="primary"
+              onClick={handleShow1}
+              className="addstd mb-2"
+            >
+              Add Task
+            </Button>
+            <Modal show={show1} onHide={handleClose1}>
+              <Modal.Header closeButton className="header-popup">
+                <Modal.Title>Task </Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <Form>
+                  <Form.Group
+                    className="mb-3"
+                    controlId="exampleForm.ControlInput1"
+                  >
+                    <Form.Label>Task title</Form.Label>
+                    <Form.Control placeholder=" English M2" autoFocus />
+                    
+                  </Form.Group>
+                  
+                  <Form.Group
+                    className="mb-3"
+                    controlId="exampleForm.ControlTextarea1"
+                  >
+                    <Form.Label>Task discription </Form.Label>
+                    <Form.Control as="textarea" />
+                  </Form.Group>
+                  <Form.Group
+                    className="mb-3"
+                  >
+                    <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} className='date_AT' />
+                 
+                  </Form.Group>
+                </Form>
+              </Modal.Body>
+              <Modal.Footer className="footer-popup">
+                <Button variant="secondary" onClick={handleClose1}>
+                  Close
+                </Button>
+                <Button variant="primary" onClick={handleClose1}>
+                 Add Task
+                </Button>
+              </Modal.Footer>
+            </Modal>
     
       <Table bordered hover className="table">
         <thead>

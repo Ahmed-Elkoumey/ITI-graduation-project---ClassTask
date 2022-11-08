@@ -40,20 +40,20 @@ const Sidemenu = ({children}) => {
         }
     ]
     return (
-        <div className="container">
-           <div style={{width: isOpen ? "300px" : "50px"}} className="sidebar">
-               <div className="top_section">
-                   <h1 style={{display: isOpen ? "block" : "none"}} className="logo">Mr/Ahmed Elzoghaby</h1>
-                   <div style={{marginLeft: isOpen ? "-300px" : "0px"}} className="bars">
+        <div className="container-AT">
+           <div style={{width: isOpen ? "230px" : "50px"}} className="sidebar_AT">
+               <div className="top_section_AT">
+                   <h1 style={{display: isOpen ? "block" : "none"}} className="logo_AT">Mr/Ahmed Elzoghaby</h1>
+                   <div style={{marginLeft: isOpen ? "-290px" : "0px"}} className="bars_AT">
                        <FaBars onClick={toggle}/>
                    </div>
                </div>
                {
                    menuItem.map((item, index)=>(
-                       <NavLink to={item.path} key={index} className="link" activeclassName="active">
-                           <div className="icon">{item.icon}</div>
-                           <div style={{display: isOpen ? "block" : "none"}} className="link_text">{item.name}</div>
-                            {/* <Submenu item={item.name} key={index.name} />; */}
+                       <NavLink to={item.path} key={index} className="link1_AT" activeclassName="active_AT">
+                           <div className="icon-AT">{item.icon}</div>
+                           <div style={{display: isOpen ? "block" : "none"}} className="link_text_AT">{item.name}</div>
+                         
                        </NavLink>
                        
                    ))

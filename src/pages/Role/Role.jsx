@@ -7,12 +7,12 @@ import AllClasses from "./pages/Class";
 
 
 function Role() {
-  return (
-      
+  return (<div>
+    
       <BrowserRouter >
        <Sidemenu> 
      
-
+       <Navbart/>
       <Routes>
       <Route path="/dashboard"  element={<DashBoard/>} />
       
@@ -22,6 +22,7 @@ function Role() {
  </Sidemenu> 
     
  </BrowserRouter>
+ </div>
   )
 }
 
