@@ -3,9 +3,9 @@ import sliderImg1 from '../../assets/sliderImg1.jpg'
 import sliderImg2 from '../../assets/sliderImg2.jpg'
 import sliderImg3 from '../../assets/silderImg3.jpg'
 
-const Services = () => {
+const Services = (props) => {
     return ( 
-        <div className="services">
+        <div id={props.id} className="services">
             <Carousel variant="dark">
             <Carousel.Item className=''>
                 <div className="slider-img-wrapper">

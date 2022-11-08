@@ -1,7 +1,7 @@
 import { Nav, Navbar, NavLink } from "react-bootstrap";
 import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
-const Navigationbar = () => {
+const Navigationbar = (props) => {
   return (
     <Navbar className="navbar p-2" collapseOnSelect expand="sm">
       <Navbar.Toggle
@@ -15,10 +15,11 @@ const Navigationbar = () => {
           </h2>
 
           <div className="navLinks d-flex ms-auto">
-            <NavLink className="#">Services </NavLink>
-            <NavLink className="#">About us</NavLink>
-            <NavLink className="#">Plans</NavLink>
-            <NavLink className="#">Footer</NavLink>
+            <NavLink href={`#${props.hero}`}>About us</NavLink>
+            <NavLink href={`#${props.services}`}>Services </NavLink>
+            <NavLink href={`#${props.vision}`}>Vision</NavLink>
+            <NavLink href={`#${props.member}`}>Plans</NavLink>
+            <NavLink href={`#${props.footer}`}>Footer</NavLink>
           </div>
 
           <div className="login d-flex ms-auto me-2">

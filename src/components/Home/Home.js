@@ -11,12 +11,12 @@ import Footer from "./Footer";
 const Home = () => {
     return (  
         <div className="home">
-             <Navigationbar />
-            <Hero />
-            <Services />
-            <Vision/>
-            <Member/>
-            <Footer/>
+            <Navigationbar services="service-id" hero="hero-id" vision="vision-id" member="member-id" footer="footer-id" />
+            <Hero id="hero-id" />
+            <Services id="service-id" />
+            <Vision id="vision-id"/>
+            <Member id="member-id"/>
+            <Footer id="footer-id" services="service-id" hero="hero-id" vision="vision-id" member="member-id" footer="footer-id"/>
         </div>
     );
 }
