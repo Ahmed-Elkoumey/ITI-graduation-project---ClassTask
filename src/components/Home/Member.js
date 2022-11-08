@@ -3,57 +3,47 @@ import Card from 'react-bootstrap/Card';
 import BackGround from '../../assets/abstract-blue-geometric-shapes-background_1035-17545.webp'
 
 
-const Member = () => {
+const Member = (props) => {
     return ( 
-        <div className="member pt-5 mt-5 text-center pb-5 mb-5">
+        <div id={props.id} className="member pt-5 mt-5 text-center pb-5 mb-5">
             
-            
+            <h2 className='mb-5'>Our Plans</h2>
 
-            <div className="section over-hide">
-                <div className="container">
-                    <div className="row full-height justify-content-center">
-                        <div className="col-12 text-center align-self-center py-5">
-                            <div className="section text-center py-5 py-md-0">
-                                <input className="pricing" type="checkbox" id="pricing" name="pricing"/>
-                                <label for="pricing"><span className="block-diff">Free Plan<span className=" ms-5 float-right">Premuim</span></span></label>
-                                <div className="card-3d-wrap mx-auto">
-                                    <div className="card-3d-wrapper">
-                                        <div className="card-front">
-                                            <div className="pricing-wrap">
-                                                <h4 className="mb-5">lorem impsum</h4>
-                                                <h2 className="mb-2"><sup>$</sup>39 / 4<sup>hrs</sup></h2>
-                                                <p className="mb-4">per person</p>
-                                                <p className="mb-1"><i className="uil uil-location-pin-alt size-22"></i></p>
-                                                <p className="mb-4">lorem ipsum</p>
-                                                <a href="#0" className="link">Choose Free</a>
-                                                <div className="img-wrap img-2">
-                                                    <img src={BackGround} alt="" />
-                                                </div>
+            <div className="card-wrapper-ash d-flex justify-content-around">
 
-                                            </div>
-                                        </div>
-                                        <div className="card-back">
-                                        <div className="pricing-wrap">
-                                                <h4 className="mb-5">lorem impsum</h4>
-                                                <h2 className="mb-2"><sup>$</sup>39 / 4<sup>hrs</sup></h2>
-                                                <p className="mb-4">per person</p>
-                                                <p className="mb-1"><i className="uil uil-location-pin-alt size-22"></i></p>
-                                                <p className="mb-4">lorem ipsum</p>
-                                                <a href="#0" className="link">Upgrade Now</a>
-                                                <div className="img-wrap img-2">
-                                                    <img src={BackGround} alt="" />
-                                                </div>
+                    <Card className="card-container-ash p-5" style={{ width: '18rem' }}>
+                        {/* <Card.Img variant="top" src="https://via.placeholder.com/150" /> */}
+                        <Card.Body>
+                            <Card.Title className='card-title-ash p-2'>Free Tier</Card.Title>
+                            <Card.Text className='my-5'>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quo?
+                            </Card.Text>
+                            <Button className="pricing-button-ash" variant="">Join Now!</Button>
+                        </Card.Body>
+                    </Card>
 
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    <Card className="card-container-ash p-5" style={{ width: '18rem' }}>
+                        {/* <Card.Img variant="top" src="https://via.placeholder.com/150" /> */}
+                        <Card.Body>
+                            <Card.Title className='card-title-ash p-2'>Free Tier</Card.Title>
+                            <Card.Text className='my-5'>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quo?
+                            </Card.Text>
+                            <Button className="pricing-button-ash" variant="">Join Now!</Button>
+                        </Card.Body>
+                    </Card>
+
+                    <Card className="card-container-ash p-5" style={{ width: '18rem' }}>
+                        {/* <Card.Img variant="top" src="https://via.placeholder.com/150" /> */}
+                        <Card.Body>
+                            <Card.Title className='card-title-ash p-2'>Free Tier</Card.Title>
+                            <Card.Text className='my-5'>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quo?
+                            </Card.Text>
+                            <Button className="pricing-button-ash" variant="">Join Now!</Button>
+                        </Card.Body>
+                    </Card>
             </div>
-
 
         </div>
     );
