@@ -4,24 +4,22 @@ import Form from "react-bootstrap/Form";
 import "./../login/login.scss";
 import InputGroup from "react-bootstrap/InputGroup";
 // Routing
-import { useNavigate } from 'react-router-dom';
-
-
+import { useNavigate } from "react-router-dom";
+import Navigationbar from "../Home/Navigationbar";
 
 const SignUp = () => {
+  const goToLogin = useNavigate();
 
-  const goToLogin =useNavigate();
-
-
-  const handleClick = e => {
+  const handleClick = (e) => {
     e.preventDefault();
-    goToLogin('/login');
-  }
+    goToLogin("/login");
+  };
 
   return (
     <div className="form-wrapper">
+      <Navigationbar />
       <div className="container">
-        <Form className="form" onSubmit={e=>handleClick(e)}>
+        <Form className="form mt-5" onSubmit={(e) => handleClick(e)}>
           <InputGroup className="mb-3">
             <InputGroup.Text>First and last name</InputGroup.Text>
             <Form.Control aria-label="First name" />
@@ -38,7 +36,6 @@ const SignUp = () => {
             <Form.Label>Phone Number</Form.Label>
             <Form.Control type="number" placeholder="phone number" />
           </Form.Group>
-
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
             <Form.Control type="password" placeholder="Password" />
@@ -62,9 +59,16 @@ const SignUp = () => {
               />
             </div>
           ))}
+          <Form.Label className="me-2">Upload your image </Form.Label>
+          <Form.Control type="file" className="mb-2" />
           <Button variant="primary" type="submit">
             Submit
-          </Button>
+          </Button>{" "}
+          <br />
+          <Form.Label className="mt-2 me-2">have an account ? </Form.Label>
+          <a onClick={(e) => handleClick(e)} href="/login">
+            Login
+          </a>
         </Form>
       </div>
     </div>
