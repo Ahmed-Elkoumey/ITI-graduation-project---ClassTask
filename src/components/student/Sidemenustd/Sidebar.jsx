@@ -9,19 +9,20 @@ import {
 }from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
 import './side.css'
+import {Link} from 'react-router-dom'
 
 
-const Sidemenu = ({children}) => {
+const Sidemenustd = ({children}) => {
     const[isOpen ,setIsOpen] = useState(false);
     const toggle = () => setIsOpen (!isOpen);
     const menuItem=[
         {
-            path:"/dashboard",
+            path:"/student",
             name:"Dashboard",
             icon:<FaTh/>
         },
         {
-            path:"/calender",
+            path:"/calenderStudent",
             name:"Calender",
             icon:<FaRegCalendarAlt/>
         },
@@ -31,13 +32,19 @@ const Sidemenu = ({children}) => {
             icon:<FaRegChartBar/>
         },
    
-      
+        {
+            path:"/tasks",
+            name:"Tasks",
+            icon:<FaChalkboardTeacher/>,
+         
+           
+        }
     ]
     return (
         <div className="container-AT">
            <div style={{width: isOpen ? "230px" : "55px"}} className="sidebar_AT">
                <div className="top_section_AT">
-                   <h1 style={{display: isOpen ? "block" : "none"}} className="logo_AT">Mr/Ahmed Elzoghaby</h1>
+                   <h1 style={{display: isOpen ? "block" : "none"}} className="logo_AT">Osama Mohamed</h1>
                    <div style={{marginLeft: isOpen ? "-290px" : "0px"}} className="bars_AT">
                        <FaBars onClick={toggle}/>
                    </div>
@@ -63,4 +70,4 @@ const Sidemenu = ({children}) => {
         </div> 
     );
 };
-export default Sidemenu
+export default Sidemenustd
