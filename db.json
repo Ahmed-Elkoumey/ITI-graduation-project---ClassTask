@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "email": "mer@jj.xoo",
+      "password": "$2a$10$MS6SN2EkXI2fBYppGmzPJu5bNtHGR/m7AWdB5Cv39hyxsFPztEOtG",
+      "Fname": "vv",
+      "Lname": "xx",
+      "role": "teacher",
+      "id": 1
+    },
+    {
+      "email": "merna@gmail.com",
+      "password": "$2a$10$sdQB2DcXeR74cHqK9SO7zuYGd9T7n7oaecJeeAzK6LyG2ssbmAT0i",
+      "Fname": "merna ",
+      "Lname": "nabil",
+      "role": "teacher",
+      "id": 2
+    },
+    {
+      "email": "alaa@gmail.com",
+      "password": "$2a$10$UBPC04lX5K.OHHUJ13A3VuY3YjBjOR8erdkcw.l2spNJXqbPpmCBG",
+      "Fname": "alaa",
+      "Lname": "tarek",
+      "role": "on",
+      "id": 3
+    }
+  ],
+  "register": []
+}

@@ -13,9 +13,7 @@
     "date-fns": "^2.29.3",
     "react": "^18.2.0",
     "react-big-calendar": "^1.5.0",
-
     "react-bootstrap": "^2.6.0",
-
     "react-bootstrap-sidebar-menu": "^2.0.3",
     "react-datepicker": "^4.8.0",
     "react-dom": "^18.2.0",
@@ -31,7 +29,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "serve": "json-server db.json -m ./node_modules/json-server-auth"
   },
   "eslintConfig": {
     "extends": [
@@ -50,5 +49,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "json-server": "^0.17.1",
+    "json-server-auth": "^2.1.0"
   }
 }
