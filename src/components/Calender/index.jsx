@@ -46,7 +46,7 @@ export default function Calender() {
 
   return (
     <>
-      <div className="container-fluid">
+      <div className="">
         <Navbart/>
       <Sidemenu>
          

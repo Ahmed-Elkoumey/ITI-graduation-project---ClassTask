@@ -1,14 +1,17 @@
 import { BsSearch } from "react-icons/bs";
 import { IoNotificationsOutline } from "react-icons/io5";
-import UserAvatar from "../../../assets/user-avatar.jpg";
+import UserAvatar from "../../../assets/girl.jpg";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Form } from "react-bootstrap";
 
+
 import "./style.css";
 import { Link } from "react-router-dom";
 const StudentNav = () => {
+  
+  
   let userInfo = (
     <div className="d-flex rounded-pill user-info pe-2">
       <img
@@ -23,8 +26,13 @@ const StudentNav = () => {
     </div>
   );
   return (
-    <Navbar collapseOnSelect expand="lg" className="student-nav">
-      <Navbar.Brand href="#home" className="student__logo">
+    <div className="">
+    
+
+   
+    <Navbar collapseOnSelect   className=' d-flex justify-content-around ' expand="lg">
+       
+      <Navbar.Brand href="#home" className="logo_AT ms-3">
         ClassTask
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -57,21 +65,25 @@ const StudentNav = () => {
             className="student__notify d-sm-none d-lg-block"
             role="button"
           />
+           <div className=' d-flex  acc_AT' >
+          <img className=' rounded-circle img-fluid teacher' src={UserAvatar} alt='user'/>
           <NavDropdown
-            title={userInfo}
+            title='Osama Mohamed'
             id="collasible-nav-dropdown"
-            className="mh-100"
+            className="mh-100 accountbar_AT>
+            </Nav>"
           >
             <NavDropdown.Item href="#">Profile</NavDropdown.Item>
             <NavDropdown.Item href="#">Classes</NavDropdown.Item>
             <NavDropdown.Item href="#">Tasks</NavDropdown.Item>
-            <Link to="/calender">Calender</Link>
+        
             <NavDropdown.Divider />
             <NavDropdown.Item href="#">Settings</NavDropdown.Item>
-          </NavDropdown>
+          </NavDropdown> </div>
         </Nav>
       </Navbar.Collapse>
-    </Navbar>
+    
+    </Navbar>  </div>
   );
 };
 export default StudentNav;
