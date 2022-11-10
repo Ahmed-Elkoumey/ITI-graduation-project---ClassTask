@@ -14,8 +14,33 @@ import Modal from "react-bootstrap/Modal";
 import Sidemenust from "../Sidemenustd/Sidebar";
 
 // bars
+import {useParams} from "react-router-dom";
+import { useEffect } from "react";
+
 
 export default function Calenderstd() {
+
+  const [data, setData] = useState([]);
+
+  const param = useParams();
+
+  useEffect(() => {
+    return () => {
+      userDetails();
+    };
+  }, []);
+
+  const userDetails = () => {
+    try {
+      fetch(`http://localhost:3000/users/${param.id}`)
+        .then((res) => res.json())
+        .then((json) => setData(json));
+    } catch {
+      throw Error;
+    }
+  };
+
+
   const [show, setShow] = useState(false);
 
   const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
@@ -41,7 +66,7 @@ export default function Calenderstd() {
   return (
     <>
       <div className="">
-        <Navbarst/>
+        <Navbarst title={`${data.Fname} ${data.Lname}`}/>
       <Sidemenust>
          
 

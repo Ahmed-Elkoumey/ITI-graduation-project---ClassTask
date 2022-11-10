@@ -1,3 +1,6 @@
+import {useParams} from "react-router-dom";
+
+
 import format from "date-fns/format";
 import getDay from "date-fns/getDay";
 import parse from "date-fns/parse";
@@ -12,10 +15,34 @@ import Navbart from "../Shared/Navbart";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Sidemenu from "../Shared/Sidemenu/Sidebar";
+import { useEffect } from "react";
 
 // bars
 
 export default function Calender() {
+
+  const [data, setData] = useState([]);
+
+  const param = useParams();
+
+  useEffect(() => {
+    return () => {
+      userDetails();
+    };
+  }, []);
+
+  const userDetails = () => {
+    try {
+      fetch(`http://localhost:3000/users/${param.id}`)
+        .then((res) => res.json())
+        .then((json) => setData(json));
+    } catch {
+      throw Error;
+    }
+  };
+
+
+
   const [show, setShow] = useState(false);
 
   const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
@@ -47,7 +74,7 @@ export default function Calender() {
   return (
     <>
       <div className="">
-        <Navbart/>
+        <Navbart title={`${data.Fname} ${data.Lname}`}/>
       <Sidemenu>
          
 

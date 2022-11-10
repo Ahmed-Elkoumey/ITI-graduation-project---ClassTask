@@ -27,8 +27,8 @@ const Login = () => {
       .then((res) => res.json())
       .then((data) =>
         data.user.role === "teacher"
-          ? navigate("/dashboard")
-          : navigate("/student")
+          ? navigate(`/dashboard/${data.user.id}`)
+          : navigate(`/student/${data.user.id}`)
       );
   }
   function handleChange(e) {

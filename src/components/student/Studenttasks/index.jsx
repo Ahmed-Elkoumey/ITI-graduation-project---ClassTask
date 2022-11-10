@@ -2,12 +2,35 @@ import "./style.css";
 import StudentNav from "../student-nav/index";
  import Sidemenustd from "../Sidemenustd/Sidebar";
 import Table from "react-bootstrap/Table";
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
+import {useParams} from "react-router-dom";
+
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import EmptyTask from "../../../assets/empty-task-list.svg";
 
 function  Studenttasks() {
+
+
+  const [data, setData] = useState([]);
+
+  const param = useParams();
+
+  useEffect(() => {
+    return () => {
+      userDetails();
+    };
+  }, []);
+
+  const userDetails = () => {
+    try {
+      fetch(`http://localhost:3000/users/${param.id}`)
+        .then((res) => res.json())
+        .then((json) => setData(json));
+    } catch {
+      throw Error;
+    }
+  };
 
     const [show, setShow] = useState(false);
   
@@ -31,7 +54,7 @@ function  Studenttasks() {
   // }
   return (
     <div>
-    <StudentNav />
+    <StudentNav title={`${data.Fname} ${data.Lname}`}/>
     <Sidemenustd>
       
     <section className="student-tasks py-2">

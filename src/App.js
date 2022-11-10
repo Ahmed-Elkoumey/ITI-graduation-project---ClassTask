@@ -39,9 +39,9 @@ function App() {
           {
             <>
 
-              <Route path="/dashboard" element={<DashBoard />} />
+              <Route path="/dashboard/:id" element={<DashBoard />} />
 
-              <Route path="/Allclasses" element={<AllClasses />} />
+              <Route path="/Allclasses/:id" element={<AllClasses />} />
 
             </>
           } else if(role==="student"){
@@ -49,10 +49,10 @@ function App() {
             
 
     
-            <Route path="/student" element={<Student />} />
+            <Route path="/student/:id" element={<Student />} />
             
-        <Route path="/tasks"  element={<Studenttasks/>} />  
-        <Route path= '/calenderStudent'element={<Calenderstd/>}/>
+        <Route path="/tasks/:id"  element={<Studenttasks/>} />  
+        <Route path= '/calenderStudent/:id'element={<Calenderstd/>}/>
       
      
 
@@ -60,7 +60,7 @@ function App() {
           }
 
 
-          <Route path="/calender" element={<Calender />}/>
+          <Route path="/calender/:id" element={<Calender />}/>
         </Routes>
       </Router>
     </div>

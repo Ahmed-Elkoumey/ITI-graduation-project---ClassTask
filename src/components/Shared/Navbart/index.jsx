@@ -9,7 +9,7 @@ import { FaBell } from "@react-icons/all-files/fa/FaBell";
 import teacher from "./assests/teacher1.jpg";
 
 
-function Navbart() {
+function Navbart({title}) {
   return (
     <Navbar id='navbart' className='navbart d-flex justify-content-between' expand="lg">
       <Container fluid>
@@ -37,7 +37,7 @@ function Navbart() {
         <div className=' d-flex  acc_AT' >
      
                   <img className=' rounded-circle img-fluid teacher' src={teacher} alt='user'/>
-            <NavDropdown  title="Ahmed Elzoghaby" id="navbarScrollingDropdown" className="accountbar_AT">
+            <NavDropdown  title={title} id="navbarScrollingDropdown" className="accountbar_AT">
               <NavDropdown.Item href="#action3" className='dropdown'>Settings</NavDropdown.Item>
               <NavDropdown.Item href="#action4" className='dropdown'>
                 Help

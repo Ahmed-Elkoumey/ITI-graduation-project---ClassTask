@@ -1,7 +1,7 @@
 import "./home.css";
 import "./charcter.css";
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
@@ -12,6 +12,28 @@ import Sidemenu from "../../components/Shared/Sidemenu/Sidebar";
 import Navbart from "../../components/Shared/Navbart";
 
 function DashBoard() {
+
+  
+  const [data, setData] = useState([]);
+
+  const param = useParams();
+
+  useEffect(() => {
+    return () => {
+      userDetails();
+    };
+  }, []);
+
+  const userDetails = () => {
+    try {
+      fetch(`http://localhost:3000/users/${param.id}`)
+        .then((res) => res.json())
+        .then((json) => setData(json));
+    } catch {
+      throw Error;
+    }
+  };
+
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -24,15 +46,15 @@ function DashBoard() {
 
   return (
     <>
-      <Navbart />
-      <Sidemenu>
+      <Navbart title={`${data.Fname} ${data.Lname}`}/>
+      <Sidemenu title={`${data.Fname} ${data.Lname}`}>
         <div className=" d-flex flex-column align-content-center  container1 ">
           {/*** ************************************** first card **********************************/}
           <div className="mb-2 d-flex   home">
             <div className="total me-5">
               <p>
                 {" "}
-                Total students are
+                Total students are 
                 <br />
                 <p className="value">50 Students</p>
               </p>
@@ -170,7 +192,7 @@ function DashBoard() {
                     <tr>
                       <td className="id">#12583A</td>
                       <td className="cell">
-                        <Link to="/Allclasses" className="cell">
+                        <Link to={`/Allclasses/${param.id}`} className="cell">
                           {" "}
                           Math J4
                         </Link>

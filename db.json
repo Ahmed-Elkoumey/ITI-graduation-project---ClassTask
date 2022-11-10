@@ -1,4 +1,7 @@
 {
+  "tasks": [],
+  "classes": [],
+  "events": [],
   "users": [
     {
       "email": "mer@jj.xoo",
@@ -23,6 +26,22 @@
       "Lname": "tarek",
       "role": "on",
       "id": 3
+    },
+    {
+      "email": "elkomy432@gmail.com",
+      "password": "$2a$10$5bIq30dgJJtFb1dXB0wBWuKeJALetH6nJuRjmb2znkc9b3OoyHiJG",
+      "Fname": "Ahmed",
+      "Lname": "Elkomy",
+      "role": "teacher",
+      "id": 4
+    },
+    {
+      "email": "anas@gmail.com",
+      "password": "$2a$10$mYWSaYW9fCRhxskAYosMN.xxI1jR0NuQJynQ6v3uTCZj5cqqPCl1C",
+      "Fname": "anas",
+      "Lname": "ahmed",
+      "role": "on",
+      "id": 5
     }
   ],
   "register": []

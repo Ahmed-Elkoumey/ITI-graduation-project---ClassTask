@@ -9,31 +9,48 @@ import {
 }from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
 import './side.css'
-import {Link} from 'react-router-dom'
+import {Link,useParams} from 'react-router-dom'
+import { useEffect } from 'react';
 
 
 const Sidemenustd = ({children}) => {
+
+    const [data, setData] = useState([]);
+
+    const param = useParams();
+  
+    useEffect(() => {
+      return () => {
+        userDetails();
+      };
+    }, []);
+  
+    const userDetails = () => {
+      try {
+        fetch(`http://localhost:3000/users/${param.id}`)
+          .then((res) => res.json())
+          .then((json) => setData(json));
+      } catch {
+        throw Error;
+      }
+    };
+
+
     const[isOpen ,setIsOpen] = useState(false);
     const toggle = () => setIsOpen (!isOpen);
     const menuItem=[
         {
-            path:"/student",
+            path:`/student/${param.id}`,
             name:"Dashboard",
             icon:<FaTh/>
         },
         {
-            path:"/calenderStudent",
+            path:`/calenderStudent/${param.id}`,
             name:"Calender",
             icon:<FaRegCalendarAlt/>
         },
         {
-            path:"/analytics",
-            name:"Analytics",
-            icon:<FaRegChartBar/>
-        },
-   
-        {
-            path:"/tasks",
+            path:`/tasks/${param.id}`,
             name:"Tasks",
             icon:<FaChalkboardTeacher/>,
          

@@ -5,11 +5,39 @@ import "./style.css";
 import Sidemenu from "../../components/student/Sidemenustd/Sidebar";
 import { FaChild}from "react-icons/fa";
 import { FaChalkboardTeacher}from "react-icons/fa";
+import { useState } from "react";
+import {useParams} from "react-router-dom";
+import { useEffect } from "react";
+
+
 const Student = () => {
+
+   
+  const [data, setData] = useState([]);
+
+  const param = useParams();
+
+  useEffect(() => {
+    return () => {
+      userDetails();
+    };
+  }, []);
+
+  const userDetails = () => {
+    try {
+      fetch(`http://localhost:3000/users/${param.id}`)
+        .then((res) => res.json())
+        .then((json) => setData(json));
+    } catch {
+      throw Error;
+    }
+  };
+
+
 
   return (
     <div>
-      <StudentNav />
+      <StudentNav title={`${data.Fname} ${data.Lname}`}/>
       <Sidemenu>
       <div class="paper  mt-5">
     <div class="paper-content d-flex">
