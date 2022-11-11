@@ -1,4 +1,14 @@
-export const registerNew = async ({ Fname, Lname, email, password, role }) => {
+export const registerNew = async ({
+  Fname,
+  Lname,
+  email,
+  password,
+  role,
+  nameFather,
+  phoneFather,
+  emailFather,
+  photo,
+}) => {
   try {
     const userData = await fetch("http://localhost:3000/register", {
       method: "post",
@@ -8,6 +18,10 @@ export const registerNew = async ({ Fname, Lname, email, password, role }) => {
         email,
         password,
         role,
+        nameFather,
+        phoneFather,
+        emailFather,
+        photo
       }),
       headers: {
         "Content-Type": "application/json",

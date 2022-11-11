@@ -11,7 +11,9 @@ import { useState } from "react";
 import logo from '../Home/assest/logooo.png'
 import './signUp.css'
 const SignUp = () => {
+  const [isStudent, setIsStudent] = useState(false);
 
+  const [pdfFile, setPdfFile] = useState(null);
 
   const [formData, setFormData] = useState({
     Fname: "",
@@ -19,7 +21,28 @@ const SignUp = () => {
     email: "",
     password: "",
     role: "",
+    nameFather: "",
+    phoneFather: "",
+    emailFather: "",
+    picture:null,
   });
+
+  function handleFileChange(e) {
+    let fileSelected = e.target.files[0];
+
+    let reader = new FileReader();
+    reader.readAsDataURL(fileSelected);
+
+    reader.onloadend = (e) => {
+      setPdfFile(e.target.result);
+      console.log(e.target.result);
+      setFormData({...formData , picture:e.target.result});
+    };
+    console.log(formData.picture);
+  }
+
+
+
   const goToLogin = useNavigate();
   const handelSingUp = (e) => {
     e.preventDefault();
@@ -30,6 +53,10 @@ const SignUp = () => {
       email: formData.email,
       password: formData.password,
       role: formData.role,
+      nameFather: formData.nameFather,
+      phoneFather: formData.phoneFather,
+      emailFather: formData.emailFather,
+      photo: formData.picture,
     }).then((data) => console.log(data));
 
     goToLogin("/login");
@@ -42,12 +69,14 @@ const SignUp = () => {
   };
 
   return (
-    <div className="form-wrapper ">
-      <Navigationbar />
+    <>
+     <Navigationbar />
+    <div className="form-wrapper">
+     
       <div className=" d-flex ">
       <div className="container ">
       
-        <Form className="form mt-5" onSubmit={(e) => handelSingUp(e)}>
+        <Form className="form my-5 d-block" onSubmit={(e) => handelSingUp(e)}>
           
           <InputGroup className="mb-3">
             
@@ -109,6 +138,7 @@ const SignUp = () => {
                   setFormData({ ...formData, role: e.target.value })
                 }
                 id={`inline-${type}-1`}
+                onClick={(e) => setIsStudent(false)}
               />
               <Form.Check
                 inline
@@ -119,11 +149,62 @@ const SignUp = () => {
                 onChange={(e) =>
                   setFormData({ ...formData, role: e.target.value })
                 }
+                onClick={(e) => setIsStudent(true)}
               />
             </div>
           ))}
+
+{isStudent &&
+<>
+<Form.Group className=" m-0" controlId="formBasicEmail">
+            <Form.Label>Your Father Name</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter Your Father Name"
+              value={formData.nameFather}
+              onChange={(e) =>
+                setFormData({ ...formData, nameFather: e.target.value })
+              }
+            />
+            <Form.Text className="text-muted">
+              We'll never share your email with anyone else.
+            </Form.Text>
+          </Form.Group>
+
+<Form.Group className=" m-0" controlId="formBasicEmail">
+<Form.Label>Enter Your Father email</Form.Label>
+<Form.Control
+  type="email"
+  placeholder="Enter Your Father email"
+  value={formData.emailFather}
+  onChange={(e) =>
+    setFormData({ ...formData, emailFather: e.target.value })
+  }
+/>
+<Form.Text className="text-muted">
+  We'll never share your email with anyone else.
+</Form.Text>
+</Form.Group>
+
+<Form.Group className=" m-0" controlId="formBasicEmail">
+            <Form.Label>Enter Your Father Phone</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter Your Father Phone"
+              value={formData.phoneFather}
+              onChange={(e) =>
+                setFormData({ ...formData, phoneFather: e.target.value })
+              }
+            />
+            <Form.Text className="text-muted">
+              We'll never share your email with anyone else.
+            </Form.Text>
+          </Form.Group>
+          </>
+          }
+
           <Form.Label className="me-2">Upload your image </Form.Label>
-          <Form.Control type="file" className="mb-2" />
+          <Form.Control type="file" className="mb-2" onChange={handleFileChange}/>
           <Button variant="primary" type="submit">
             Submit
           </Button>{" "}
@@ -137,6 +218,7 @@ const SignUp = () => {
  
       </div>
     </div>
+    </>
   );
 };
 export default SignUp;

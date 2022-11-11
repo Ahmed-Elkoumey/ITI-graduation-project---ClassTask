@@ -54,8 +54,8 @@ function AllClasses() {
    
     <>
     
-    <Navbart />
-    <Sidemenu>
+    <Navbart title={`${data.Fname} ${data.Lname}`} pic={data.photo}/>
+    <Sidemenu title={`${data.Fname} ${data.Lname}`} >
       <div className="container">
       <div className="row">
     <div className=" mt-3 ms-3 ">

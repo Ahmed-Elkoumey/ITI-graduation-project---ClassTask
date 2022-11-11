@@ -8,11 +8,11 @@ import { Form } from "react-bootstrap";
 
 import "./style.css";
 import { Link } from "react-router-dom";
-const StudentNav = ({ title }) => {
+const StudentNav = ({ title, pic }) => {
   let userInfo = (
     <div className="d-flex rounded-pill user-info pe-2">
       <img
-        src={UserAvatar}
+        src={pic}
         alt="user-avatar"
         className="rounded-circle img-fluid me-2"
       />
@@ -22,6 +22,7 @@ const StudentNav = ({ title }) => {
       </div>
     </div>
   );
+  
   return (
     <div className="">
       <Navbar
@@ -65,7 +66,7 @@ const StudentNav = ({ title }) => {
             <div className=" d-flex  acc_AT">
               <img
                 className=" rounded-circle img-fluid teacher"
-                src={UserAvatar}
+                src={pic}
                 alt="user"
               />
               <NavDropdown

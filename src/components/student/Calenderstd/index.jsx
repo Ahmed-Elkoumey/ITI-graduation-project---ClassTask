@@ -66,8 +66,8 @@ export default function Calenderstd() {
   return (
     <>
       <div className=" ">
-        <Navbarst/>
-      <Sidemenust>
+        <Navbarst title={`${data.Fname} ${data.Lname}`} pic={data.photo}/>
+      <Sidemenust title={`${data.Fname} ${data.Lname}`}>
          
 
             <div className="row ">
@@ -83,7 +83,7 @@ export default function Calenderstd() {
                   events={allEvents}
                   startAccessor="start"
                   endAccessor="end"
-                  className="w-100"
+                  className="ms-5 w-100"
                   style={{ height: 450 }}
                 />
               </div>

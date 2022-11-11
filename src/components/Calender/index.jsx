@@ -74,8 +74,8 @@ export default function Calender() {
   return (
     <>
       <div className="">
-        <Navbart title={`${data.Fname} ${data.Lname}`}/>
-      <Sidemenu>
+        <Navbart title={`${data.Fname} ${data.Lname}`} pic={data.photo}/>
+      <Sidemenu title={`${data.Fname} ${data.Lname}`}>
          
 
             <div className="row">

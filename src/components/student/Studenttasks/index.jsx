@@ -58,8 +58,8 @@ function  Studenttasks() {
   // }
   return (
     <div>
-    <StudentNav title={`${data.Fname} ${data.Lname}`}/>
-    <Sidemenustd>
+    <StudentNav title={`${data.Fname} ${data.Lname}`} pic={data.photo}/>
+    <Sidemenustd title={`${data.Fname} ${data.Lname}`}>
       
     <section className="student-tasks py-2">
       <div className="student-tasks__container container py-5">

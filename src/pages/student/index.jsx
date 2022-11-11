@@ -33,9 +33,9 @@ const Student = () => {
 
   return (
     <div className="student">
-      <StudentNav title={`${data.Fname} ${data.Lname}`} />
+      <StudentNav title={`${data.Fname} ${data.Lname}`} pic={data.photo} />
 
-      <Sidemenu title={`${data.Fname} ${data.Lname}`}>
+      <Sidemenu title={`${data.Fname} ${data.Lname}`} pic={data.photo}>
         <div className="container bodyst1">
           <div className="row">
             <div className=" d-flex flex-wrap">
@@ -85,14 +85,14 @@ const Student = () => {
                       </span>
                     </p>
                     <p className="textarea2">
-                      Name:<span className="dataarea"> Ahmed Abdelfattah</span>
+                      Name:<span className="dataarea"> {data.nameFather}</span>
                     </p>
                     <p className="textarea2">
-                      PhoneNumber:<span className="dataarea">01236554789</span>
+                      PhoneNumber:<span className="dataarea">{data.phoneFather}</span>
                     </p>
 
                     <p className="textarea2">
-                      Email:<span className="dataarea">Ahmed898@gmail.com</span>
+                      Email:<span className="dataarea">{data.emailFather}</span>
                     </p>
                   </div>
                 </div>
