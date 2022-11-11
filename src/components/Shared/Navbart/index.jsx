@@ -10,7 +10,9 @@ import UserAvatar from "../../../assets/girl.jpg";
 import { FaBell } from "@react-icons/all-files/fa/FaBell";
 import teacher from "./assests/teacher1.jpg";
 
-function Navbart({ title, pic }) {
+function Navbart({ title, pic ,userId}) {
+
+
   return (
     <Navbar
       id="navbart"
@@ -20,7 +22,9 @@ function Navbart({ title, pic }) {
     >
       <Container fluid>
         <Navbar.Brand href="#" className=" logo_AT">
+         <Link to={`/`}>
           ClassTask
+         </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">

@@ -1,6 +1,8 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import gold from './assest/gold.png'
+import gold from './assest/golden-removebg-preview.png'
+import Silver from './assest/silver-removebg-preview.png'
+import Bronze from './assest/pronze-removebg-preview.png'
 
 
 const Member = (props) => {
@@ -14,7 +16,7 @@ const Member = (props) => {
             <div className="card-wrapper-ash d-flex justify-content-around flex-wrap  ">
 
                     <Card className="card-container-ash "  style={{ width: '18rem' }}>
-                         <Card.Img variant="top" src={gold} />
+                         <Card.Img variant="top" src={gold} className="p-5"/>
                          <Card.Body className='cardbody-member '>
                             {/* <Card.Title className=' title-member'>Golden Menmbership</Card.Title> */}
                             <Card.Text className=''>
@@ -29,7 +31,7 @@ const Member = (props) => {
                     </Card>
 
                     <Card className="card-container-ash pb-3"  style={{ width: '18rem' }}>
-                         <Card.Img variant="top" src={gold} />
+                         <Card.Img variant="top" src={Silver}  className="p-5"/>
                          <Card.Body className='cardbody-member '>
                             {/* <Card.Title className=' title-member'>Golden Menmbership</Card.Title> */}
                             <Card.Text className=''>
@@ -45,7 +47,7 @@ const Member = (props) => {
                     </Card>
 
                     <Card className="card-container-ash pb-3"  style={{ width: '18rem' }}>
-                         <Card.Img variant="top" src={gold} />
+                         <Card.Img variant="top" src={Bronze}  className="p-5"/>
                          <Card.Body className='cardbody-member '>
                             {/* <Card.Title className=' title-member'>Golden Menmbership</Card.Title> */}
                             <Card.Text className=''>
