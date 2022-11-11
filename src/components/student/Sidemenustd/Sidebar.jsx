@@ -13,7 +13,7 @@ import {Link,useParams} from 'react-router-dom'
 import { useEffect } from 'react';
 
 
-const Sidemenustd = ({children}) => {
+const Sidemenustd = ({children,title}) => {
 
     const [data, setData] = useState([]);
 
@@ -49,14 +49,8 @@ const Sidemenustd = ({children}) => {
             name:"Calender",
             icon:<FaRegCalendarAlt/>
         },
-<<<<<<< HEAD
-    
-        {
-            path:"/tasks",
-=======
         {
             path:`/tasks/${param.id}`,
->>>>>>> 04d58691a4ae62325a8d25ac72839fce86df05be
             name:"Tasks",
             icon:<FaChalkboardTeacher/>,
          
@@ -70,7 +64,7 @@ const Sidemenustd = ({children}) => {
              
            <div style={{width: isOpen ? "163px" : "55px"}} className="sidebar_AT ">
                <div className="top_section_AT">
-                   <h1 style={{display: isOpen ? "block" : "none"}} className="logo_AT1">Osama Mohamed</h1>
+                   <h1 style={{display: isOpen ? "block" : "none"}} className="logo_AT1">Stud/ {title}</h1>
                    <div style={{marginLeft: isOpen ? "4px" : "0px"}} className="bars_AT">
                        <FaBars onClick={toggle}/>
                    </div>

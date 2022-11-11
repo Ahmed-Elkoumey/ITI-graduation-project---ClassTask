@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
  import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
  import NavDropdown from 'react-bootstrap/NavDropdown';
+ import {Link} from "react-router-dom";
 import './navbar.css'
 import UserAvatar from "../../../assets/girl.jpg";
 import { FaBell } from "@react-icons/all-files/fa/FaBell";
@@ -38,14 +39,7 @@ function Navbart({title}) {
         {/* <div className=' d-flex  acc_AT' >
      
                   <img className=' rounded-circle img-fluid teacher' src={teacher} alt='user'/>
-<<<<<<< HEAD
-            <NavDropdown 
-             title="Ahmed Elzoghaby"
-             id="collasible-nav-dropdown"
-              className="accountbar_AT">
-=======
             <NavDropdown  title={title} id="navbarScrollingDropdown" className="accountbar_AT">
->>>>>>> 04d58691a4ae62325a8d25ac72839fce86df05be
               <NavDropdown.Item href="#action3" className='dropdown'>Settings</NavDropdown.Item>
               <NavDropdown.Item href="#action4" className='dropdown'>
                 Help
@@ -58,7 +52,7 @@ function Navbart({title}) {
                <div className=' d-flex  acc_AT' >
           <img className=' rounded-circle img-fluid teacher' src={UserAvatar} alt='user'/>
           <NavDropdown
-            title='Osama Mohamed'
+            title={title}
             id="collasible-nav-dropdown"
             className="mh-100 accountbar_AT>
             </Nav>"
@@ -68,7 +62,7 @@ function Navbart({title}) {
             <NavDropdown.Item href="#">Tasks</NavDropdown.Item>
         
             <NavDropdown.Divider />
-            <NavDropdown.Item href="#">Settings</NavDropdown.Item>
+            <Link to="/">LogOut</Link>
           </NavDropdown> </div>
            
           </Nav> 

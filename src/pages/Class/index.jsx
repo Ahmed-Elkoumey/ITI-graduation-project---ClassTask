@@ -54,16 +54,10 @@ function AllClasses() {
    
     <>
     
-<<<<<<< HEAD
     <Navbart />
     <Sidemenu>
       <div className="container">
       <div className="row">
-=======
-    <Navbart title={`${data.Fname} ${data.Lname}`}/>
-    <Sidemenu title={`${data.Fname} ${data.Lname}`}>
-      
->>>>>>> 04d58691a4ae62325a8d25ac72839fce86df05be
     <div className=" mt-3 ms-3 ">
         <div className=" d-flex align-baseline">
       <h4 className="headinf ">Class </h4>

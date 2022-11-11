@@ -15,12 +15,8 @@ import Navbart from "../Shared/Navbart";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Sidemenu from "../Shared/Sidemenu/Sidebar";
-<<<<<<< HEAD
 import './index.css'
-=======
 import { useEffect } from "react";
-
->>>>>>> 04d58691a4ae62325a8d25ac72839fce86df05be
 // bars
 
 export default function Calender() {
@@ -97,7 +93,7 @@ export default function Calender() {
                   events={allEvents}
                   startAccessor="start"
                   endAccessor="end"
-                  className="w-100"
+                  className="ms-5 w-100"
                   style={{ height: 450 }}
                 />
               </div>

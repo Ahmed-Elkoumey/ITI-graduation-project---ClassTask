@@ -1,13 +1,8 @@
 import "./home.css";
 import "./charcter.css";
-<<<<<<< HEAD
 import "./teacherresponsice.css"
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-=======
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
->>>>>>> 04d58691a4ae62325a8d25ac72839fce86df05be
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
@@ -52,17 +47,11 @@ function DashBoard() {
 
   return (
     <>
-<<<<<<< HEAD
-      <Navbart />
-      <Sidemenu>
+     <Navbart title={`${data.Fname} ${data.Lname}`}/>
+      <Sidemenu title={`${data.Fname} ${data.Lname}`}>
         <div className=" container">
         <div className="row">
         <div className=" d-flex flex-column align-content-center flex-wrap   container1 ">
-=======
-      <Navbart title={`${data.Fname} ${data.Lname}`}/>
-      <Sidemenu title={`${data.Fname} ${data.Lname}`}>
-        <div className=" d-flex flex-column align-content-center  container1 ">
->>>>>>> 04d58691a4ae62325a8d25ac72839fce86df05be
           {/*** ************************************** first card **********************************/}
           <div className="mb-2 d-flex flex-wrap   home">
             <div className="total me-5">

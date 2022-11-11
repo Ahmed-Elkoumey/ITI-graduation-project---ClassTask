@@ -65,13 +65,8 @@ export default function Calenderstd() {
 
   return (
     <>
-<<<<<<< HEAD
       <div className=" ">
         <Navbarst/>
-=======
-      <div className="">
-        <Navbarst title={`${data.Fname} ${data.Lname}`}/>
->>>>>>> 04d58691a4ae62325a8d25ac72839fce86df05be
       <Sidemenust>
          
 

@@ -2,18 +2,15 @@ import StudentNav from "../../components/student/student-nav";
 import UserAvatar from "../../assets/girl.jpg";
 import StudentTasks from "../../components/student/Studenttasks";
 import "./style.css";
-import "./responsive.css"
+import "./responsive.css";
 import Sidemenu from "../../components/student/Sidemenustd/Sidebar";
-import { FaChild}from "react-icons/fa";
-import { FaChalkboardTeacher}from "react-icons/fa";
+import { FaChild } from "react-icons/fa";
+import { FaChalkboardTeacher } from "react-icons/fa";
 import { useState } from "react";
-import {useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 
-
 const Student = () => {
-
-   
   const [data, setData] = useState([]);
 
   const param = useParams();
@@ -34,62 +31,77 @@ const Student = () => {
     }
   };
 
-
-
   return (
-<<<<<<< HEAD
     <div className="student">
-    <StudentNav /> 
-     
-       <Sidemenu>
-      
+      <StudentNav title={`${data.Fname} ${data.Lname}`} />
+
+      <Sidemenu title={`${data.Fname} ${data.Lname}`}>
         <div className="container bodyst1">
-        <div className="row"> 
-        <div className=" d-flex flex-wrap">
-=======
-    <div>
-      <StudentNav title={`${data.Fname} ${data.Lname}`}/>
-      <Sidemenu>
->>>>>>> 04d58691a4ae62325a8d25ac72839fce86df05be
-      <div class="paper  mt-5">
-    <div class="paper-content ">
-     
-      {/* <img src={UserAvatar} alt='user' className=" img-fluid student__photo "></img> */}
-        <div className="textareaall">
-        <p className="textarea1 text-dark ">Student <span className="dataarea  fa-10x"><FaChild/></span></p>
-          <p className="textarea1">Name:<span className="dataarea">Sara Ahmed</span></p>
-          <p className="textarea1">ID:<span className="dataarea">#54414</span></p>
-          <p className="textarea1">Date Of Birth:<span className="dataarea">1/10/2013</span></p>
-          <p className="textarea1">Email:<span className="dataarea">SaraA@gmail.com</span></p>
-          <p className="textarea1">Class:<span className="dataarea">Junior-4</span></p>
-          <p className="textarea1">  Enrollrd classes<span className="dataarea">Math -English</span></p>
-        </div>
-        </div>
-        </div>
-        <div class="paper1  mt-5">
-    <div class="paper-content d-flex ">
-     
+          <div className="row">
+            <div className=" d-flex flex-wrap">
+              <div class="paper  mt-5">
+                <div class="paper-content ">
+                  {/* <img src={UserAvatar} alt='user' className=" img-fluid student__photo "></img> */}
+                  <div className="textareaall">
+                    <p className="textarea1 text-dark ">
+                      Student{" "}
+                      <span className="dataarea  fa-10x">
+                        <FaChild />
+                      </span>
+                    </p>
+                    <p className="textarea1">
+                      Name:
+                      <span className="dataarea">
+                        {data.Fname} {data.Lname}
+                      </span>
+                    </p>
+                    <p className="textarea1">
+                      ID:<span className="dataarea">{data.id}</span>
+                    </p>
+                    <p className="textarea1">
+                      Date Of Birth:<span className="dataarea">1/10/2013</span>
+                    </p>
+                    <p className="textarea1">
+                      Email:<span className="dataarea">{data.email}</span>
+                    </p>
+                    <p className="textarea1">
+                      Class:<span className="dataarea">Junior-4</span>
+                    </p>
+                    <p className="textarea1">
+                      {" "}
+                      Enrollrd classes
+                      <span className="dataarea">Math -English</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="paper1  mt-5">
+                <div class="paper-content d-flex ">
+                  <div className="textareaall">
+                    <p className="textarea2 text-dark ">
+                      Parent
+                      <span className="dataarea  fa-10x">
+                        <FaChalkboardTeacher />
+                      </span>
+                    </p>
+                    <p className="textarea2">
+                      Name:<span className="dataarea"> Ahmed Abdelfattah</span>
+                    </p>
+                    <p className="textarea2">
+                      PhoneNumber:<span className="dataarea">01236554789</span>
+                    </p>
 
-        <div className="textareaall">
-        <p className="textarea2 text-dark ">Parent<span className="dataarea  fa-10x"><FaChalkboardTeacher/></span></p>
-          <p className="textarea2">Name:<span className="dataarea"> Ahmed Abdelfattah</span></p>
-          <p className="textarea2">PhoneNumber:<span className="dataarea">01236554789</span></p>
-         
-          <p className="textarea2">Email:<span className="dataarea">Ahmed898@gmail.com</span></p>
+                    <p className="textarea2">
+                      Email:<span className="dataarea">Ahmed898@gmail.com</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        </div>
-        </div>
-        </div>
-        
-      
-
-    
-
-</div>
-</div>
-</Sidemenu>
-</div> 
-   
+      </Sidemenu>
+    </div>
   );
 };
 export default Student;

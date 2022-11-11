@@ -24,25 +24,10 @@ const StudentNav = ({ title }) => {
   );
   return (
     <div className="">
-<<<<<<< HEAD
-    
-
-   
-    <Navbar collapseOnSelect   className=' d-flex justify-content-around ' expand="xl">
-       
-      <Navbar.Brand href="#home" className="logo_AT ms-3">
-        ClassTask
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse
-        id="responsive-navbar-nav"
-        className="justify-content-around"
-=======
       <Navbar
         collapseOnSelect
         className=" d-flex justify-content-around "
         expand="lg"
->>>>>>> 04d58691a4ae62325a8d25ac72839fce86df05be
       >
         <Navbar.Brand href="#home" className="logo_AT ms-3">
           ClassTask
@@ -94,7 +79,7 @@ const StudentNav = ({ title }) => {
                 <NavDropdown.Item href="#">Tasks</NavDropdown.Item>
 
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#">Settings</NavDropdown.Item>
+                <Link  to="/">Log Out</Link>
               </NavDropdown>{" "}
             </div>
           </Nav>
