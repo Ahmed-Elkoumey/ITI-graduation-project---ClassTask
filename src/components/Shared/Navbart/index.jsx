@@ -5,13 +5,14 @@ import Form from 'react-bootstrap/Form';
 import Navbar from 'react-bootstrap/Navbar';
  import NavDropdown from 'react-bootstrap/NavDropdown';
 import './navbar.css'
+import UserAvatar from "../../../assets/girl.jpg";
 import { FaBell } from "@react-icons/all-files/fa/FaBell";
 import teacher from "./assests/teacher1.jpg";
 
 
 function Navbart() {
   return (
-    <Navbar id='navbart' className='navbart d-flex justify-content-between' expand="lg">
+    <Navbar id='navbart' className='navbart d-flex justify-content-between' expand="lg"  collapseOnSelect >
       <Container fluid>
         <Navbar.Brand href="#" className=' logo_AT' >ClassTask</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -34,10 +35,13 @@ function Navbart() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-        <div className=' d-flex  acc_AT' >
+        {/* <div className=' d-flex  acc_AT' >
      
                   <img className=' rounded-circle img-fluid teacher' src={teacher} alt='user'/>
-            <NavDropdown  title="Ahmed Elzoghaby" id="navbarScrollingDropdown" className="accountbar_AT">
+            <NavDropdown 
+             title="Ahmed Elzoghaby"
+             id="collasible-nav-dropdown"
+              className="accountbar_AT">
               <NavDropdown.Item href="#action3" className='dropdown'>Settings</NavDropdown.Item>
               <NavDropdown.Item href="#action4" className='dropdown'>
                 Help
@@ -46,13 +50,29 @@ function Navbart() {
               <NavDropdown.Item href="#action5" className='dropdown'>
               Log out
               </NavDropdown.Item>
-            </NavDropdown></div>
+            </NavDropdown></div> */}
+               <div className=' d-flex  acc_AT' >
+          <img className=' rounded-circle img-fluid teacher' src={UserAvatar} alt='user'/>
+          <NavDropdown
+            title='Osama Mohamed'
+            id="collasible-nav-dropdown"
+            className="mh-100 accountbar_AT>
+            </Nav>"
+          >
+            <NavDropdown.Item href="#">Profile</NavDropdown.Item>
+            <NavDropdown.Item href="#">Classes</NavDropdown.Item>
+            <NavDropdown.Item href="#">Tasks</NavDropdown.Item>
+        
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="#">Settings</NavDropdown.Item>
+          </NavDropdown> </div>
            
           </Nav> 
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
+
 }
 
 

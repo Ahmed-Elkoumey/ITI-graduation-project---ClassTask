@@ -26,12 +26,7 @@ const Sidemenustd = ({children}) => {
             name:"Calender",
             icon:<FaRegCalendarAlt/>
         },
-        {
-            path:"/analytics",
-            name:"Analytics",
-            icon:<FaRegChartBar/>
-        },
-   
+    
         {
             path:"/tasks",
             name:"Tasks",
@@ -41,11 +36,14 @@ const Sidemenustd = ({children}) => {
         }
     ]
     return (
-        <div className="container-AT">
-           <div style={{width: isOpen ? "230px" : "55px"}} className="sidebar_AT">
+    
+       
+           <div className='container-St'>
+             
+           <div style={{width: isOpen ? "163px" : "55px"}} className="sidebar_AT ">
                <div className="top_section_AT">
-                   <h1 style={{display: isOpen ? "block" : "none"}} className="logo_AT">Osama Mohamed</h1>
-                   <div style={{marginLeft: isOpen ? "-290px" : "0px"}} className="bars_AT">
+                   <h1 style={{display: isOpen ? "block" : "none"}} className="logo_AT1">Osama Mohamed</h1>
+                   <div style={{marginLeft: isOpen ? "4px" : "0px"}} className="bars_AT">
                        <FaBars onClick={toggle}/>
                    </div>
                </div>
@@ -61,13 +59,17 @@ const Sidemenustd = ({children}) => {
                }
            </div>
            
-           <main>{children}
-           
+           <main>
+           {children}
            
            </main>
-    
+          
+           </div>
+          
+          
            
-        </div> 
+           
+       
     );
 };
 export default Sidemenustd

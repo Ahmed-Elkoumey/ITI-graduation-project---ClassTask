@@ -23,6 +23,7 @@
 .task-table {
   border: var(--blue);
   border-radius: 10px;
+  margin-left: 50px;
  
 }
 thead {

@@ -30,7 +30,7 @@ const StudentNav = () => {
     
 
    
-    <Navbar collapseOnSelect   className=' d-flex justify-content-around ' expand="lg">
+    <Navbar collapseOnSelect   className=' d-flex justify-content-around ' expand="xl">
        
       <Navbar.Brand href="#home" className="logo_AT ms-3">
         ClassTask

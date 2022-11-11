@@ -1,14 +1,18 @@
 *{
-    /* margin:0;
-    padding:0; */
+    margin:0;
+    padding:0;
     text-decoration: none;
+    box-sizing: border-box;
 }
-.container-AT{
-    display:flex;
-    margin: -10px ;
-    border-radius: 10px;
 
-}
+.container-St{
+    display:flex;
+      margin: -10px ; 
+    border-radius: 10px; 
+   
+  
+
+} 
 main{
     width: 100%; 
      padding:0 px;
@@ -16,17 +20,19 @@ main{
 .sidebar_AT{
     background: var(--beige) ;
     color: var(--blue);
-    height: 100vh;
-    width: 200px;
+    height: 200vh;
+    width: 150px;
     transition: all 0.5s;
     text-decoration: none;
+    position: absolute;
+   
 }
 .top_section_AT{
     display: flex;
     align-items:center;
      padding:20px 15px; 
 }
-.logo_AT{
+.logo_AT1{
     font-size: 20px;
 }
 .bars_AT{

@@ -4,7 +4,10 @@ import logo from './assest/logooo.png'
 const Vision = (props) =>
  {
     return ( 
+        <div className='container'>
+        <div className='row'>
         <div id={props.id} className="our-vision pt-5 mt-5 pb-5 text-center d-flex justify-content-center">
+            
             <div className="row align-items-center justify-content-around ">
                 <div className="col-md-4">
                     <img src={Lightbulb} alt="lightbulb" className=' img-fluid img-vision' />
@@ -17,6 +20,8 @@ const Vision = (props) =>
                 </div>
             </div>
         </div>
+
+        </div></div>
      );
 }
  

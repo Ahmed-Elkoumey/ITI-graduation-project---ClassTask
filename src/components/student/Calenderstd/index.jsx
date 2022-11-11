@@ -12,7 +12,7 @@ import Navbarst from "../student-nav/index";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Sidemenust from "../Sidemenustd/Sidebar";
-
+import './index.css'
 // bars
 
 export default function Calenderstd() {
@@ -40,19 +40,19 @@ export default function Calenderstd() {
 
   return (
     <>
-      <div className="">
+      <div className=" ">
         <Navbarst/>
       <Sidemenust>
          
 
-            <div className="row">
-              <div className="col-md-5 m-auto">
-            <h1 className="text-center mt-4">Calendar1</h1>
+            <div className="row ">
+              <div className="col-md-5 m-auto ">
+            <h1 className="text-center mt-4">Calendar</h1>
   
 
               </div>
 
-              <div className="col-md-11 m-auto">
+              <div className="col-md-11 m-auto calender-body">
                 <Calendar
                   localizer={localizer}
                   events={allEvents}

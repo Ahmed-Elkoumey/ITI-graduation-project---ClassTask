@@ -12,7 +12,7 @@ import Navbart from "../Shared/Navbart";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Sidemenu from "../Shared/Sidemenu/Sidebar";
-
+import './index.css'
 // bars
 
 export default function Calender() {
@@ -55,12 +55,12 @@ export default function Calender() {
               <div className="col-md-5 m-auto">
             <h1 className="text-center mt-4">Calendar</h1>
   
-<Button variant="primary" className="w-100 mb-3" onClick={handleShow}>
+<Button variant="primary" className="w-100 mb-3 calenderbtn" onClick={handleShow}>
                 Add New Event
               </Button>
               </div>
 
-              <div className="col-md-11 m-auto">
+              <div className="col-md-11 m-auto calender-body">
                 <Calendar
                   localizer={localizer}
                   events={allEvents}

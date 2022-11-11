@@ -23,6 +23,22 @@
       "Lname": "tarek",
       "role": "on",
       "id": 3
+    },
+    {
+      "email": "alaa@Gmail.com",
+      "password": "$2a$10$rjQvQyt.asH8jJOYndRcwO2sIsz9pdHvKojc7Zqlfp7Ecb5qZgfkq",
+      "Fname": "alaa",
+      "Lname": "tarek",
+      "role": "teacher",
+      "id": 4
+    },
+    {
+      "email": "moaz@Gmail.com",
+      "password": "$2a$10$qmng7yMrIqO8kgXjqhekV.zCPdbstLpaCLurjCkGGSyG1ZRZvt4Ka",
+      "Fname": "moaz",
+      "Lname": "tarek",
+      "role": "on",
+      "id": 5
     }
   ],
   "register": []

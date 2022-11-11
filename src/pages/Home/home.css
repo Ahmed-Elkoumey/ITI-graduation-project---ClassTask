@@ -1,7 +1,11 @@
 
 .container1 {
-  margin-left:150px;
+
   box-sizing: border-box;
+}
+.home{
+display: flex;
+
 }
 .total{
     width:200px;

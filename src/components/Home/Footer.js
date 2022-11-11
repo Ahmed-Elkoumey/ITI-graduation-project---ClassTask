@@ -2,6 +2,8 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import {FaPhoneSquare} from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 const Footer = (props) => {
     return ( 
         <div id={props.id} className="footer pt-5 container-fluid">
@@ -31,6 +33,10 @@ const Footer = (props) => {
                     <ul className=" list-unstyled mt-3 ">
                         <li className="mb-4"><a href="#" className="text-black text-decoration-none ps-4">Privacy Policy</a></li>
                         <li><a href="#" className="text-black text-decoration-none ps-4">Terms Of Service</a></li>
+                        <li> <Link to="/help" className="text-black text-decoration-none ps-4">
+                          {" "}
+                          Help
+                        </Link></li>
                     </ul>
                     <label className=" fs-2 ps-3">Contact Us</label>
                     <ul className=" list-unstyled mt-3 icons-footer ">

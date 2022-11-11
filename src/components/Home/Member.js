@@ -9,10 +9,11 @@ const Member = (props) => {
             
             <h2 className='mb-5 section-title'>Member Plans</h2>
                
-     
-            <div className="card-wrapper-ash d-flex justify-content-around">
+     <div className='container'>
+     <div className='row '>
+            <div className="card-wrapper-ash d-flex justify-content-around flex-wrap  ">
 
-                    <Card className="card-container-ash pb-3"  style={{ width: '18rem' }}>
+                    <Card className="card-container-ash "  style={{ width: '18rem' }}>
                          <Card.Img variant="top" src={gold} />
                          <Card.Body className='cardbody-member '>
                             {/* <Card.Title className=' title-member'>Golden Menmbership</Card.Title> */}
@@ -58,6 +59,8 @@ const Member = (props) => {
                         <Button className="pricing-button-ash" variant="">Join Now!</Button>
                     </Card>
             </div> 
+            </div>
+            </div>
 
         </div>
     );

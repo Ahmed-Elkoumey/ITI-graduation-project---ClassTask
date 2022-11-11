@@ -1,5 +1,5 @@
 import "./Allclass.css";
-
+import './classresponsive.css'
 import DatePicker from "react-datepicker";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
@@ -28,7 +28,8 @@ function AllClasses() {
     
     <Navbart />
     <Sidemenu>
-      
+      <div className="container">
+      <div className="row">
     <div className=" mt-3 ms-3 ">
         <div className=" d-flex align-baseline">
       <h4 className="headinf ">Class </h4>
@@ -138,7 +139,7 @@ function AllClasses() {
               </Modal.Footer>
             </Modal>
     
-      <Table bordered hover className="table">
+      <Table bordered hover className="table" responsive="sm">
         <thead>
           <tr>
             <th>ID</th>
@@ -242,6 +243,8 @@ function AllClasses() {
      
         </tbody>
       </Table>
+    </div>
+    </div>
     </div>
     
     </Sidemenu>

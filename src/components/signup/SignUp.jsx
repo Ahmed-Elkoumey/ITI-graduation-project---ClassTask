@@ -8,7 +8,8 @@ import { useNavigate } from "react-router-dom";
 import Navigationbar from "../Home/Navigationbar";
 import { registerNew } from "../../Apis/register";
 import { useState } from "react";
-
+import logo from '../Home/assest/logooo.png'
+import './signUp.css'
 const SignUp = () => {
   const [formData, setFormData] = useState({
     Fname: "",
@@ -37,11 +38,15 @@ const SignUp = () => {
   };
 
   return (
-    <div className="form-wrapper">
+    <div className="form-wrapper ">
       <Navigationbar />
-      <div className="container">
+      <div className=" d-flex ">
+      <div className="container ">
+      
         <Form className="form mt-5" onSubmit={(e) => handelSingUp(e)}>
+          
           <InputGroup className="mb-3">
+            
             <InputGroup.Text>First and last name</InputGroup.Text>
             <Form.Control
               aria-label="First name"
@@ -124,6 +129,8 @@ const SignUp = () => {
             Login
           </a>
         </Form>
+      </div>
+ 
       </div>
     </div>
   );

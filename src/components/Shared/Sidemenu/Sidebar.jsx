@@ -25,20 +25,16 @@ const Sidemenu = ({children}) => {
             name:"Calender",
             icon:<FaRegCalendarAlt/>
         },
-        {
-            path:"/analytics",
-            name:"Analytics",
-            icon:<FaRegChartBar/>
-        },
+     
    
       
     ]
     return (
         <div className="container-AT">
-           <div style={{width: isOpen ? "230px" : "55px"}} className="sidebar_AT">
+           <div style={{width: isOpen ? "163px" : "55px"}} className="sidebar_AT">
                <div className="top_section_AT">
-                   <h1 style={{display: isOpen ? "block" : "none"}} className="logo_AT">Mr/Ahmed Elzoghaby</h1>
-                   <div style={{marginLeft: isOpen ? "-290px" : "0px"}} className="bars_AT">
+                   <h1 style={{display: isOpen ? "block" : "none"}} className="logo_AT1">Mr/Ahmed Elzoghaby</h1>
+                   <div style={{marginLeft: isOpen ? "4px" : "0px"}} className="bars_AT">
                        <FaBars onClick={toggle}/>
                    </div>
                </div>

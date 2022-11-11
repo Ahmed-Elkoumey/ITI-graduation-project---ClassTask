@@ -1,5 +1,6 @@
 import "./home.css";
 import "./charcter.css";
+import "./teacherresponsice.css"
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
@@ -26,9 +27,11 @@ function DashBoard() {
     <>
       <Navbart />
       <Sidemenu>
-        <div className=" d-flex flex-column align-content-center  container1 ">
+        <div className=" container">
+        <div className="row">
+        <div className=" d-flex flex-column align-content-center flex-wrap   container1 ">
           {/*** ************************************** first card **********************************/}
-          <div className="mb-2 d-flex   home">
+          <div className="mb-2 d-flex flex-wrap   home">
             <div className="total me-5">
               <p>
                 {" "}
@@ -96,11 +99,12 @@ function DashBoard() {
             </div>
           </div>
 
-          <div className=" d-flex">
+          <div className=" d-flex flex-wrap">
+            <div>
             <Button
               variant="primary"
               onClick={handleShow1}
-              className="button-56 ms-5"
+              className="button-56 ms-5 mb-3"
             >
               Add new Class <FaRegAddressCard className=" ms-3" />
             </Button>
@@ -135,7 +139,8 @@ function DashBoard() {
                 </Button>
               </Modal.Footer>
             </Modal>
-
+            </div>
+            <div>
             <Button
               variant="primary"
               onClick={handleShow}
@@ -206,7 +211,10 @@ function DashBoard() {
                 <Button variant="primary">save</Button>
               </Modal.Footer>
             </Modal>
+            </div>
           </div>
+        </div>
+        </div>
         </div>
       </Sidemenu>
     </>

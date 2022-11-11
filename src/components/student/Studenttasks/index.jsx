@@ -16,18 +16,22 @@ function  Studenttasks() {
   // let taskCount = 5;
   // if (taskCount < 1) {
   //   return (
-    
-  //     <section className="student-tasks py-2">
-  //       <div className="student-tasks__container container py-5">
-  //         <h2 className="tasks-title text-center">Tasks List</h2>
-  //         <p className="text-center">No Tasks For Now</p>
-  //         <div className="empty-poster my-0 mx-auto">
-  //           <img src={EmptyTask} alt="empty-task-list" className="w-100" />
-  //         </div>
-  //       </div>
-  //     </section>
+//       <div>
+//     <StudentNav />
+//     <Sidemenustd>
+//       <section className="student-tasks py-2">
+//         <div className="student-tasks__container container py-5">
+//           <h2 className="tasks-title text-center">Tasks List</h2>
+//           <p className="text-center">No Tasks For Now</p>
+//           <div className="empty-poster my-0 mx-auto">
+//             <img src={EmptyTask} alt="empty-task-list" className="w-100" />
+//           </div>
+//         </div>
+//       </section>
+//       </Sidemenustd>
+//  </div>
      
-  //   );
+    // );
   // }
   return (
     <div>
@@ -37,7 +41,7 @@ function  Studenttasks() {
     <section className="student-tasks py-2">
       <div className="student-tasks__container container py-5">
         <h2 className="tasks-title text-center">Tasks List</h2>
-        <Table bordered hover className="task-table">
+        <Table bordered hover className="task-table" responsive="lg" >
           <thead>
             <tr className="text-center">
               <th>Task Number</th>
