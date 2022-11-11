@@ -6,9 +6,38 @@ import "./responsive.css"
 import Sidemenu from "../../components/student/Sidemenustd/Sidebar";
 import { FaChild}from "react-icons/fa";
 import { FaChalkboardTeacher}from "react-icons/fa";
+import { useState } from "react";
+import {useParams} from "react-router-dom";
+import { useEffect } from "react";
+
+
 const Student = () => {
 
+   
+  const [data, setData] = useState([]);
+
+  const param = useParams();
+
+  useEffect(() => {
+    return () => {
+      userDetails();
+    };
+  }, []);
+
+  const userDetails = () => {
+    try {
+      fetch(`http://localhost:3000/users/${param.id}`)
+        .then((res) => res.json())
+        .then((json) => setData(json));
+    } catch {
+      throw Error;
+    }
+  };
+
+
+
   return (
+<<<<<<< HEAD
     <div className="student">
     <StudentNav /> 
      
@@ -17,6 +46,11 @@ const Student = () => {
         <div className="container bodyst1">
         <div className="row"> 
         <div className=" d-flex flex-wrap">
+=======
+    <div>
+      <StudentNav title={`${data.Fname} ${data.Lname}`}/>
+      <Sidemenu>
+>>>>>>> 04d58691a4ae62325a8d25ac72839fce86df05be
       <div class="paper  mt-5">
     <div class="paper-content ">
      

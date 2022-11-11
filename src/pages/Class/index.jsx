@@ -10,7 +10,35 @@ import std1 from "./avatar-ebd2b8ace0fe7e957f6d19ae33582675.jpg";
 import Navbart from "../../components/Shared/Navbart";
 import Sidemenu from "../../components/Shared/Sidemenu/Sidebar";
 
+import {useParams} from "react-router-dom";
+import { useEffect } from "react";
+
+
 function AllClasses() {
+
+  
+  const [data, setData] = useState([]);
+
+  const param = useParams();
+
+  useEffect(() => {
+    return () => {
+      userDetails();
+    };
+  }, []);
+
+  const userDetails = () => {
+    try {
+      fetch(`http://localhost:3000/users/${param.id}`)
+        .then((res) => res.json())
+        .then((json) => setData(json));
+    } catch {
+      throw Error;
+    }
+  };
+ 
+
+
   const [startDate, setStartDate] = useState(new Date());
   const [show1, setShow1] = useState(false);
 
@@ -26,10 +54,16 @@ function AllClasses() {
    
     <>
     
+<<<<<<< HEAD
     <Navbart />
     <Sidemenu>
       <div className="container">
       <div className="row">
+=======
+    <Navbart title={`${data.Fname} ${data.Lname}`}/>
+    <Sidemenu title={`${data.Fname} ${data.Lname}`}>
+      
+>>>>>>> 04d58691a4ae62325a8d25ac72839fce86df05be
     <div className=" mt-3 ms-3 ">
         <div className=" d-flex align-baseline">
       <h4 className="headinf ">Class </h4>

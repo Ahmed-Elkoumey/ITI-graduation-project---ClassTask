@@ -11,6 +11,8 @@ import { useState } from "react";
 import logo from '../Home/assest/logooo.png'
 import './signUp.css'
 const SignUp = () => {
+
+
   const [formData, setFormData] = useState({
     Fname: "",
     Lname: "",
@@ -18,7 +20,7 @@ const SignUp = () => {
     password: "",
     role: "",
   });
-
+  const goToLogin = useNavigate();
   const handelSingUp = (e) => {
     e.preventDefault();
     console.log(formData);
@@ -29,8 +31,10 @@ const SignUp = () => {
       password: formData.password,
       role: formData.role,
     }).then((data) => console.log(data));
+
+    goToLogin("/login");
   };
-  const goToLogin = useNavigate();
+ 
 
   const handleClick = (e) => {
     e.preventDefault();

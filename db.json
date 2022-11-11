@@ -1,4 +1,7 @@
 {
+  "tasks": [],
+  "classes": [],
+  "events": [],
   "users": [
     {
       "email": "mer@jj.xoo",
@@ -25,18 +28,32 @@
       "id": 3
     },
     {
+<<<<<<< HEAD
       "email": "alaa@Gmail.com",
       "password": "$2a$10$rjQvQyt.asH8jJOYndRcwO2sIsz9pdHvKojc7Zqlfp7Ecb5qZgfkq",
       "Fname": "alaa",
       "Lname": "tarek",
+=======
+      "email": "elkomy432@gmail.com",
+      "password": "$2a$10$5bIq30dgJJtFb1dXB0wBWuKeJALetH6nJuRjmb2znkc9b3OoyHiJG",
+      "Fname": "Ahmed",
+      "Lname": "Elkomy",
+>>>>>>> 04d58691a4ae62325a8d25ac72839fce86df05be
       "role": "teacher",
       "id": 4
     },
     {
+<<<<<<< HEAD
       "email": "moaz@Gmail.com",
       "password": "$2a$10$qmng7yMrIqO8kgXjqhekV.zCPdbstLpaCLurjCkGGSyG1ZRZvt4Ka",
       "Fname": "moaz",
       "Lname": "tarek",
+=======
+      "email": "anas@gmail.com",
+      "password": "$2a$10$mYWSaYW9fCRhxskAYosMN.xxI1jR0NuQJynQ6v3uTCZj5cqqPCl1C",
+      "Fname": "anas",
+      "Lname": "ahmed",
+>>>>>>> 04d58691a4ae62325a8d25ac72839fce86df05be
       "role": "on",
       "id": 5
     }
