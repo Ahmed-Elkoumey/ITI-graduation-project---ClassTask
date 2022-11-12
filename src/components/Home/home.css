@@ -1,18 +1,69 @@
+/* *{
+    box-sizing: border-box;
+    margin: 0 auto;
+} */
 body{
   overflow-x: hidden;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .navbar {
-background-color:#F2E6DF ;
+background-color:var(--beige) ;
+}
+.logo_Ash{
+    color:var(--blue);
+    font-size: 50;
+    font-weight: bolder;
+    margin-right: 315px;
+   
+    
+}
+.login{
+    color:var(--blue)
 }
 
-.hero{
-    overflow-x: hidden;
-    background-color: #F28E85;
+.hero{ 
+    display: flex;
+    justify-content: space-between;
+     overflow-x: hidden;
+ 
 }
+
+
+.logopic{
+    scale: 0.9;
+    }
+
 
 .hero p{
     max-width: 300px;
+   
+}
+.cardhero{
+    width:350px;
+     margin-top: 66px;
+    margin-left: 29px;
+    height: 300px;
+    
+    border: none;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+
+}
+.cardhero:hover{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+.headcard{
+    color:var(--blue);
+    font-size: 30px;
+    font-weight: 800;
+
+}
+.subhead{
+    color:var(--pink)
+}
+.btn-hero{
+    background-color:var(--blue) ;
 }
 
 .hero button{
@@ -22,35 +73,148 @@ background-color:#F2E6DF ;
 /* .services{
     background-color: #D9D0A7;
 } */
-.our-vision{
-    background-color: #F2E6DF;
-    overflow-x: hidden;
+.data{
+    color: var(--blue);
+    font-size: 40px;
+    font-weight: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 80px;
+   
+
 }
 
+.animation{
+    background-color: var(--beige);
+    height: 200px;
+    position: relative;
+    margin-bottom: 150px;
+    padding:0 60px;
+}
+.animationdiv{
+  position: absolute;
+  height: 10px;
+  
+    
+}
+.wrapper1{
+   
+    /* margin-left: 420px; */
+    transform: scale(0.9);
+    margin-top: -100px;
+
+  }
+  .slidder{
+    width:80%;
+    margin: 0 auto;
+    position: relative;
+   
+
+  }
+  .slider_img{
+    z-index: -1px;
+    height: 400px;
+   
+  }
+  .text-slidder{
+    background-color: var(--beige);
+    border-radius: 20px;
+    opacity: 0.8;
+    /* position: absolute;
+    top:150px; */
+    /* height: 200px; */
+    
+    
+  }
+
+.our-vision{
+    background-color: var(--beige);
+    overflow-x: hidden;
+
+    
+}
+.title{
+    color: var(--blue);
+    font-weight: 700;
+}
+.img-vision{
+ 
+    position: relative;
+    border-radius: 20px;
+}
+.drawing{
+    z-index: 5px;
+    position: absolute;
+    scale: 0.15;
+    left: -400px;
+    top:1060px;
+    opacity: 0.6;
+}
 
 .our-vision p{
     max-width: 500px;
 }
 
 
-
+.section-title{
+    color: var(--blue);
+    font-size: 35px ;
+    font-weight: 600;
+}
 
 
 .member .pricing-button-ash{
-    background-color: #5A7CBF;
+    background-color: var(--blue);
+    width: 150px;
     color: white;
+    margin-left: 70px;
+
+}.member .pricing-button-ash:hover{
+    background-color:#5669F5;
 }
 
+.details{
+    font-weight: 800;
+    font-size: larger;
+   
+
+}
+
+
 .footer{
-    background-color: #F2E6DF;
+    background-color: var(--beige);
+}
+.footer label{
+    color:var(--blue)
+}
+.icons-footer{
+    font-size: 30px;
 }
 
 
 .card-container-ash{
-  background-color: #F28E85;
+   background-color:var(--beige);
+   border: none;
+   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
 
-.card-title-ash{
-  background-color: #5A7CBF;
-  color: white;
+.title-member{
+ font-size: 30px;
+ font-weight: 500;
 }
+.cardbody-member{
+
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.cardbody-member h4{
+    color: brown;
+}
+
+
+
+
+
+
+

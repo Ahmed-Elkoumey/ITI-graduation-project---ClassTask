@@ -1,0 +1,23 @@
+.bg-blue1{
+    background-color: var(--pink) !important;
+    color: #5A7CBF !important;
+}
+.calender-body{
+    
+    scale: 0.9;
+}
+@media only screen and (max-width: 700px) {
+    .calender-body{
+    
+        scale: 0.8;
+    }
+    .calenderbtn{
+        width:150px
+    }
+  }
+  @media only screen and (max-width: 450px) {
+    .calender-body{
+    
+        scale: 0.7;
+    }
+  }

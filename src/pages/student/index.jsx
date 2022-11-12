@@ -1,44 +1,107 @@
 import StudentNav from "../../components/student/student-nav";
-import UserAvatar from "../../assets/user-avatar.jpg";
-import StudentTasks from "../../components/student/student-tasks";
+import UserAvatar from "../../assets/girl.jpg";
+import StudentTasks from "../../components/student/Studenttasks";
 import "./style.css";
+import "./responsive.css";
+import Sidemenu from "../../components/student/Sidemenustd/Sidebar";
+import { FaChild } from "react-icons/fa";
+import { FaChalkboardTeacher } from "react-icons/fa";
+import { useState } from "react";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 const Student = () => {
+  const [data, setData] = useState([]);
+
+  const param = useParams();
+
+  useEffect(() => {
+    return () => {
+      userDetails();
+    };
+  }, []);
+
+  const userDetails = () => {
+    try {
+      fetch(`http://localhost:3000/users/${param.id}`)
+        .then((res) => res.json())
+        .then((json) => setData(json));
+    } catch {
+      throw Error;
+    }
+  };
+
   return (
-    <main>
-      <StudentNav />
-      <section className="p-5 container-fluid student">
-        <div className="d-flex justify-content-around w-100 mb-2">
-          <img
-            src={UserAvatar}
-            alt="user-avatar"
-            className="student__photo rounded-circle"
-          />
-          <p className="d-flex w-25 justify-content-around align-items-center">
-            Name: <h2 className="student__title ms-2 fw-bold">User Name</h2>
-          </p>
-        </div>
-        <div className="p-5">
+    <div className="student">
+      <StudentNav title={`${data.Fname} ${data.Lname}`} pic={data.photo} />
+
+      <Sidemenu title={`${data.Fname} ${data.Lname}`} pic={data.photo}>
+        <div className="container bodyst1">
           <div className="row">
-            <div className="col-md-6 col-sm-12">
-              <h2>Student Details</h2>
-              <p>Student Name:</p>
-              <p>Student ID:</p>
-              <p>Date Of Birth:</p>
-              <p>Graduation Year:</p>
-              <p>Enrolled class:</p>
-            </div>
-            <div className="col-md-6 col-sm-12">
-              <h2>Parent Details</h2>
-              <p>Parent Name:</p>
-              <p>Parent Email:</p>
-              <p>Parent Number:</p>
+            <div className=" d-flex flex-wrap">
+              <div class="paper  mt-5">
+                <div class="paper-content ">
+                  {/* <img src={UserAvatar} alt='user' className=" img-fluid student__photo "></img> */}
+                  <div className="textareaall">
+                    <p className="textarea1 text-dark ">
+                      Student{" "}
+                      <span className="dataarea  fa-10x">
+                        <FaChild />
+                      </span>
+                    </p>
+                    <p className="textarea1">
+                      Name:
+                      <span className="dataarea">
+                        {data.Fname} {data.Lname}
+                      </span>
+                    </p>
+                    <p className="textarea1">
+                      ID:<span className="dataarea">{data.id}</span>
+                    </p>
+                    <p className="textarea1">
+                      Date Of Birth:<span className="dataarea">1/10/2013</span>
+                    </p>
+                    <p className="textarea1">
+                      Email:<span className="dataarea">{data.email}</span>
+                    </p>
+                    <p className="textarea1">
+                      Class:<span className="dataarea">Junior-4</span>
+                    </p>
+                    <p className="textarea1">
+                      {" "}
+                      Enrollrd classes
+                      <span className="dataarea">Math -English</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="paper1  mt-5">
+                <div class="paper-content d-flex ">
+                  <div className="textareaall">
+                    <p className="textarea2 text-dark ">
+                      Parent
+                      <span className="dataarea  fa-10x">
+                        <FaChalkboardTeacher />
+                      </span>
+                    </p>
+                    <p className="textarea2">
+                      Name:<span className="dataarea"> {data.nameFather}</span>
+                    </p>
+                    <p className="textarea2">
+                      PhoneNumber:<span className="dataarea">{data.phoneFather}</span>
+                    </p>
+
+                    <p className="textarea2">
+                      Email:<span className="dataarea">{data.emailFather}</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-      <StudentTasks />
-    </main>
+      </Sidemenu>
+    </div>
   );
 };
 export default Student;

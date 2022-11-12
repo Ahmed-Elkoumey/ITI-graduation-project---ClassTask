@@ -1,0 +1,70 @@
+@media only screen and (max-width: 570px){
+
+.paper-content{
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.paper1,.paper{
+   width:300px
+
+}}
+
+@media only screen and (max-width: 500px){
+
+    .paper-content{
+        display: flex;
+        flex-direction: column;
+    
+    
+    }
+    .logo_AT1{
+    margin-right: 0px;
+    }
+    .logo_AT{
+        margin-right: 205px;
+        } 
+    .paper1,.paper{
+       width:300px;
+       height: 700px;
+       max-width:900;
+     min-width:280px; 
+     z-index: -1;
+     margin-right: 150px;
+     
+    
+    }
+
+    .paper-content .textarea2, .paper-content .textarea1 {
+        font-size: 12px;
+    }
+    
+.paper-content {
+    position: absolute;
+    display: flex;
+    top: 30px; right: 0; bottom: 30px; left: 0px;
+    background: linear-gradient(transparent, transparent 28px, #91D1D3 28px); 
+    background-size: 30px 30px;
+
+}
+
+
+    .paper:before,.paper1:before {
+        display: none;
+        content: '';
+     
+      }
+
+      .sidebar_AT {
+    /* rotate: 90deg; */
+    /* top: 200px; */
+    }
+    .logo_AT1{
+        font-size: 15px;
+    }
+    
+      }
+
+

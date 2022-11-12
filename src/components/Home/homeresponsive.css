@@ -1,0 +1,148 @@
+/*media quiry*/
+
+@media only screen and (max-width: 1200px) {
+    .navLinks{
+        display: flex;
+        flex-direction:column ;
+        align-items: center;
+        justify-content: center;
+    }
+    .login{
+        display: flex;
+        flex-direction: column;
+        margin-right: 250px;
+    }
+    .data{
+     display: none;
+    }
+    .hero{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 150px;
+    }
+    .wrapper1{
+     scale:0.7; 
+
+   
+    }
+    .animation{
+     background-color: white;
+     height: 0px;
+     margin-bottom: 200px;
+    }
+    .cardhero{
+     width:600px;
+     /* margin-left: 15%; */
+     font-size:25px ;
+    }
+    .hero p{
+      max-width: 500px;
+    }
+    .logopic{
+       
+        display: none;
+    }
+    .slider_img{
+        z-index: -1px;
+        height: 500px;
+        position: relative;
+       
+      }
+      .text-slidder{
+        position: absolute;
+        top: 20px;
+        width:fit-content;
+        height:fit-content;
+
+      }
+      .drawing{
+       display: none;
+    }
+    .card-container-ash{
+        margin-bottom: 20px;
+    }
+   
+   }
+
+
+   
+@media only screen and (max-width: 770px) {
+   
+    .hero{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 150px;
+    }
+  
+    .cardhero{
+     width:400px;
+     /* margin-left: 15%; */
+     font-size:25px ;
+    }
+  
+    .slider_img{
+        z-index: -1px;
+    /* height: 00px; */
+        position: relative;
+      width:900px;
+
+       
+      }
+      .text-slidder{
+        position: absolute;
+        /* top: 20px; */
+      
+        height:fit-content;
+       ;
+
+      }
+      .drawing{
+       display: none;
+    }
+    .card-container-ash{
+        margin-bottom: 20px;
+    }
+   
+   }
+      
+@media only screen and (max-width: 500px) {
+   
+    .hero{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 150px;
+    }
+  
+    .cardhero{
+     width:400px;
+     /* margin-left: 15%; */
+     font-size:25px ;
+    }
+  
+    .slider_img{
+        z-index: -1px;
+    /* height: 00px; */
+        position: relative;
+      width:600px;
+
+       
+      }
+      .text-slidder{
+        position: absolute;
+        /* top: 20px; */
+        font-size: 12px;
+        height:fit-content;
+       ;
+
+      }
+      .drawing{
+       display: none;
+    }
+    .card-container-ash{
+        margin-bottom: 20px;
+    }
+   
+   }
