@@ -157,10 +157,10 @@ const SignUp = () => {
 {isStudent &&
 <>
 <Form.Group className=" m-0" controlId="formBasicEmail">
-            <Form.Label>Your Father Name</Form.Label>
+            <Form.Label>Your Parent Name</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Enter Your Father Name"
+              placeholder="Enter Your Parent Name"
               value={formData.nameFather}
               onChange={(e) =>
                 setFormData({ ...formData, nameFather: e.target.value })
@@ -172,10 +172,10 @@ const SignUp = () => {
           </Form.Group>
 
 <Form.Group className=" m-0" controlId="formBasicEmail">
-<Form.Label>Enter Your Father email</Form.Label>
+<Form.Label>Enter Your Parent email</Form.Label>
 <Form.Control
   type="email"
-  placeholder="Enter Your Father email"
+  placeholder="Enter Your Parent email"
   value={formData.emailFather}
   onChange={(e) =>
     setFormData({ ...formData, emailFather: e.target.value })
@@ -187,10 +187,10 @@ const SignUp = () => {
 </Form.Group>
 
 <Form.Group className=" m-0" controlId="formBasicEmail">
-            <Form.Label>Enter Your Father Phone</Form.Label>
+            <Form.Label>Enter Your Parent Phone</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Enter Your Father Phone"
+              placeholder="Enter Your Parent Phone"
               value={formData.phoneFather}
               onChange={(e) =>
                 setFormData({ ...formData, phoneFather: e.target.value })

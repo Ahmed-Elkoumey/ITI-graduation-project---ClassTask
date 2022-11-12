@@ -147,11 +147,13 @@ background-color:var(--beige) ;
 .drawing{
     z-index: 5px;
     position: absolute;
-    scale: 0.15;
-    left: -400px;
-    top:1060px;
+    width: 10px;
+    left: 0px;
+    bottom:20%;
     opacity: 0.6;
+    
 }
+
 
 .our-vision p{
     max-width: 500px;

@@ -10,8 +10,11 @@ const Vision = (props) =>
             
             <div className="row align-items-center justify-content-around ">
                 <div className="col-md-4">
+                    <div className='position-relative'>
+                         
                     <img src={Lightbulb} alt="lightbulb" className=' img-fluid img-vision' />
-                    <img src={logo} alt="lightbulb" className=' img-fluid drawing' />
+                    <img src={logo} alt="lightbulb" className='w-50 drawing' />
+                        </div>
                 </div>
 
                 <div className="col-md-6">
