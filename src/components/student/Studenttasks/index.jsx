@@ -95,18 +95,24 @@ function Studenttasks() {
                     </Button>
                     <Modal show={show} onHide={handleClose} animation={false}>
                       <Modal.Header closeButton className="header-popup">
-                        <Modal.Title>{task&& task[0].taskTitle}</Modal.Title>
+                        <Modal.Title>{task.map(item=>{
+                          return item.taskTitle
+                        })}</Modal.Title>
                       </Modal.Header>
                       <Modal.Body className="bodymodal">
-                        <div class="envelope">
-                          <div class="envelope__tab"></div>
-                          <div class="envelope__letter">
-                            <p>{task&& task[0].taskTitle}</p>
+                        <div className="envelope">
+                          <div className="envelope__tab"></div>
+                          <div className="envelope__letter">
+                            <p>{task.map(item=>{
+                          return item.taskTitle
+                        })}</p>
                           </div>
-                          <div class="envelope--base"></div>
+                          <div className="envelope--base"></div>
                         </div>
                         You challange is <br />
-                       {task[0].taskDesc}
+                        {task.map(item=>{
+                          return item.taskDesc
+                        })}
                         <p className=" font-weight-bolder">
                           deadline:10/5/2022
                         </p>
