@@ -10,10 +10,44 @@ import std1 from "./avatar-ebd2b8ace0fe7e957f6d19ae33582675.jpg";
 import Navbart from "../../components/Shared/Navbart";
 import Sidemenu from "../../components/Shared/Sidemenu/Sidebar";
 
+import Kid1 from "./assets/img/kid1.jpg";
+import Kid2 from "./assets/img/kid2.jpg";
+import Kid3 from "./assets/img/kid3.jpg";
+import Kid4 from "./assets/img/kid4.jpg";
+import homeWork from "./assets/Homework.pdf";
+
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 
 function AllClasses() {
+  const [students, setstudents] = useState([
+    {
+      id: 1,
+      photo: Kid1,
+      first_name: "Jared",
+      last_name: "Welden",
+    },
+    {
+      id: 2,
+      photo: Kid2,
+      first_name: "Reeva",
+      last_name: "Sinclair",
+    },
+    {
+      id: 3,
+      photo: Kid3,
+      first_name: "Ina",
+      last_name: "Novotni",
+    },
+    {
+      id: 4,
+      photo: Kid4,
+      first_name: "Kaylil",
+      last_name: "Firmin",
+    },
+  ]);
+
+  const [kids, setKids] = useState([Kid1, Kid2, Kid3, Kid4]);
   const [data, setData] = useState([]);
 
   const [task, setTask] = useState({
@@ -44,8 +78,7 @@ function AllClasses() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(task),
-    })
-      .then((res) => res.json())
+    }).then((res) => res.json());
     console.log(task);
   };
 
@@ -197,114 +230,48 @@ function AllClasses() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td className="colm2">
-                      {" "}
-                      <div className="img">
-                        <img
-                          className=" rounded-circle img-fluid"
-                          src={std1}
-                        ></img>{" "}
-                      </div>
-                    </td>
-                    <td>Otto</td>
-                    <td>Mark</td>
-                    <td>1</td>
-                    <td className=" d-flex justify-content-between">
-                      <div>
-                        <a>Task.pdf</a>
-                      </div>
-                      <div class="checkbox-wrapper-26">
-                        <input type="checkbox" id="_checkbox-26" />
-                        <label for="_checkbox-26">
-                          <div class="tick_mark"></div>
-                        </label>
-                      </div>
-                    </td>
-                    <td>B+</td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td className="colm2">
-                      {" "}
-                      <div className="img">
-                        <img
-                          className=" rounded-circle img-fluid"
-                          src={std1}
-                        ></img>{" "}
-                      </div>
-                    </td>
-                    <td>Otto</td>
-                    <td>Mark</td>
-                    <td>1</td>
-                    <td className=" d-flex justify-content-between">
-                      <div>
-                        <a>Task.pdf</a>
-                      </div>
-                      <div class="checkbox-wrapper-26">
-                        <input type="checkbox" id="_checkbox-25" />
-                        <label for="_checkbox-25">
-                          <div class="tick_mark"></div>
-                        </label>
-                      </div>
-                    </td>
-                    <td>B+</td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td className="colm2">
-                      {" "}
-                      <div className="img">
-                        <img
-                          className=" rounded-circle img-fluid"
-                          src={std1}
-                        ></img>{" "}
-                      </div>
-                    </td>
-                    <td>Otto</td>
-                    <td>Mark</td>
-                    <td>1</td>
-                    <td className=" d-flex justify-content-between">
-                      <div>
-                        <a>Task.pdf</a>
-                      </div>
-                      <div class="checkbox-wrapper-26">
-                        <input type="checkbox" id="_checkbox-23" />
-                        <label for="_checkbox-23">
-                          <div class="tick_mark"></div>
-                        </label>
-                      </div>
-                    </td>
-                    <td>B+</td>
-                  </tr>
-                  <tr>
-                    <td>1</td>
-                    <td className="colm2">
-                      {" "}
-                      <div className="img">
-                        <img
-                          className=" rounded-circle img-fluid"
-                          src={std1}
-                        ></img>{" "}
-                      </div>
-                    </td>
-                    <td>Otto</td>
-                    <td>Mark</td>
-                    <td>1</td>
-                    <td className=" d-flex justify-content-between">
-                      <div>
-                        <a>Task.pdf</a>
-                      </div>
-                      <div class="checkbox-wrapper-26">
-                        <input type="checkbox" id="_checkbox-20" />
-                        <label for="_checkbox-20">
-                          <div class="tick_mark"></div>
-                        </label>
-                      </div>
-                    </td>
-                    <td>B+</td>
-                  </tr>
+                  {students.map((item) => (
+                    <tr>
+                      <td>{item.id}</td>
+
+                      <td className="colm2">
+                        {" "}
+                        <div className="img">
+                          <img
+                            className=" rounded-circle  img-fluid"
+                            src={item.photo}
+                          />
+                        </div>
+                      </td>
+                      <td>{item.first_name}</td>
+                      <td>{item.last_name}</td>
+                      <td>1</td>
+                      <td className=" d-flex justify-content-between">
+                        <div>
+                          <a
+                            href={homeWork}
+                            className="btn btn-success"
+                            download
+                          >
+                            DownLoad Task
+                          </a>
+                        </div>
+                        <div class="checkbox-wrapper-26">
+                          <input type="checkbox" id="_checkbox-26" />
+                          <label for="_checkbox-26">
+                            <div class="tick_mark"></div>
+                          </label>
+                        </div>
+                      </td>
+                      <td className="col-3">
+                        <div className="d-flex">
+
+                        <Form.Control className="d-flex w-50 me-3" type="text" />
+                       <button className="btn btn-primary w-25">Send</button>
+                        </div>
+                        </td>
+                    </tr>
+                  ))}
                 </tbody>
               </Table>
             </div>

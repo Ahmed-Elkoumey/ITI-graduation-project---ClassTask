@@ -31,7 +31,9 @@ const StudentNav = ({ title, pic }) => {
         expand="lg"
       >
         <Navbar.Brand href="#home" className="logo_AT ms-3">
+         
           ClassTask
+        
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse

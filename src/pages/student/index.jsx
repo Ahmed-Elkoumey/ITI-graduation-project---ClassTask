@@ -35,7 +35,7 @@ const Student = () => {
     <div className="student">
       <StudentNav title={`${data.Fname} ${data.Lname}`} pic={data.photo} />
 
-      <Sidemenu title={`${data.Fname} ${data.Lname}`} pic={data.photo}>
+      <Sidemenu  title={`${data.Fname} ${data.Lname}`} pic={data.photo}>
         <div className="container bodyst1">
           <div className="row">
             <div className=" d-flex flex-wrap">
@@ -58,20 +58,11 @@ const Student = () => {
                     <p className="textarea1">
                       ID:<span className="dataarea">{data.id}</span>
                     </p>
-                    <p className="textarea1">
-                      Date Of Birth:<span className="dataarea">1/10/2013</span>
-                    </p>
+                   
                     <p className="textarea1">
                       Email:<span className="dataarea">{data.email}</span>
                     </p>
-                    <p className="textarea1">
-                      Class:<span className="dataarea">Junior-4</span>
-                    </p>
-                    <p className="textarea1">
-                      {" "}
-                      Enrollrd classes
-                      <span className="dataarea">Math -English</span>
-                    </p>
+                   
                   </div>
                 </div>
               </div>

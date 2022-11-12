@@ -81,7 +81,7 @@ function Studenttasks() {
                   <th>Task discription</th>
                   <th>Upload Task</th>
                   <th>Teacher</th>
-                  <th>Task Evaluation</th>
+                 
                   <th>Grade</th>
                 </tr>
               </thead>
@@ -130,8 +130,8 @@ function Studenttasks() {
                     </form>
                   </td>
                   <td>Ahmed Elzohgaby</td>
-                  <td>@mdo</td>
-                  <td>@mdo</td>
+                  
+                  <td>-B</td>
                 </tr>
               </tbody>
             </Table>

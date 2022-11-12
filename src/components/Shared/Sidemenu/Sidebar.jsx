@@ -13,8 +13,7 @@ import {
 import { NavLink, useParams } from "react-router-dom";
 import "./side.css";
 
-export default function Sidemenu({children,title}) {
-  
+export default function Sidemenu({ children, title }) {
   const [data, setData] = useState([]);
 
   const param = useParams();
@@ -40,9 +39,6 @@ export default function Sidemenu({children,title}) {
     },
   ];
 
-
-
-  
   const userDetails = () => {
     try {
       fetch(`http://localhost:3000/users/${param.id}`)
@@ -55,13 +51,16 @@ export default function Sidemenu({children,title}) {
 
   return (
     <div className="container-AT">
-      <div style={{ width: isOpen ? "163px" : "55px" }} className="sidebar_AT">
-        <div className="top_section_AT">
+      <div
+        style={{ width: isOpen ? "163px" : "55px" }}
+        className="sidebar_AT h-100"
+      >
+        <div className="top_section_AT ">
           <h1
             style={{ display: isOpen ? "block" : "none" }}
             className="logo_AT1"
           >
-            Mr/ {title}  
+            Mr/ {title}
           </h1>
           <div
             style={{ marginLeft: isOpen ? "4px" : "0px" }}

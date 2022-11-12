@@ -45,11 +45,7 @@ function DashBoard() {
 
   return (
     <>
-      <Navbart
-        title={`${data.Fname} ${data.Lname}`}
-        pic={data.photo}
-  
-      />
+      <Navbart title={`${data.Fname} ${data.Lname}`} pic={data.photo} />
       <Sidemenu title={`${data.Fname} ${data.Lname}`}>
         <div className=" container">
           <div className="row">
@@ -207,22 +203,6 @@ function DashBoard() {
                                 Math J4
                               </Link>
                             </td>
-                            <td className="cell">50</td>
-                            <td>
-                              <Button variant="danger">Delete </Button>{" "}
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="id">#12583A</td>
-                            <td className="cell">Math J4</td>
-                            <td className="cell">50</td>
-                            <td>
-                              <Button variant="danger">Delete </Button>{" "}
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="id">#12583A</td>
-                            <td className="cell">Math J4</td>
                             <td className="cell">50</td>
                             <td>
                               <Button variant="danger">Delete </Button>{" "}

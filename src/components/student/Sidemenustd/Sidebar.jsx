@@ -62,7 +62,7 @@ const Sidemenustd = ({children,title}) => {
        
            <div className='container-St'>
              
-           <div style={{width: isOpen ? "163px" : "55px"}} className="sidebar_AT ">
+           <div style={{width: isOpen ? "163px" : "55px"}} className="sidebar_AT h-100">
                <div className="top_section_AT">
                    <h1 style={{display: isOpen ? "block" : "none"}} className="logo_AT1">Stud/ {title}</h1>
                    <div style={{marginLeft: isOpen ? "4px" : "0px"}} className="bars_AT">

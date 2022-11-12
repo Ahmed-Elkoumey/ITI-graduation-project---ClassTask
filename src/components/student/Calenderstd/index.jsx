@@ -76,7 +76,7 @@ console.log(allEvents)
                 events={allEvents}
                 startAccessor="start"
                 endAccessor="end"
-                className="ms-5 w-100"
+                className="ms-md-5 w-100"
                 style={{ height: 450 }}
               />
             </div>
